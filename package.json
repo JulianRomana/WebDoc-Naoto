@@ -5,18 +5,19 @@
   "author": "JulianRomana",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "concurrently \"nuxt\" \"nodemon ./api\"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "concurrently": "^4.1.0",
     "express": "^4.17.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^1.19.1",
     "sass-loader": "^7.1.0",
     "webpack": "^4.34.0"
   }
