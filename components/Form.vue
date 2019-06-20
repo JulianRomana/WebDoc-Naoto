@@ -1,6 +1,5 @@
 <template>
-  <form id="form" action @submit="checkForm()" method="post">
-    <h1>S'identifier</h1>
+  <form id="form" action @submit="checkForm" method="post">
     <label for="id">Identifiant</label>
     <input v-model="id" class="inputs" type="text" id="id" name="id">
     <label for="password">Mot de passe</label>
@@ -8,17 +7,15 @@
     <input class="button" type="submit" value="Se connecter">
   </form>
 </template>
-<style>
+<style scoped lang="scss">
 form {
-  position: absolute;
-  bottom: 45vh;
-  left: 40vw;
   display: flex;
   flex-direction: column;
 }
 label {
   font-size: 20px;
   color: white;
+  margin-top: 10px;
 }
 .inputs {
   border-radius: 7px;
@@ -48,6 +45,16 @@ export default {
       id: null,
       password: null
     };
+  },
+  methods: {
+    checkForm: e => {
+      e.preventDefault();
+      if (id.value === "admin" && password.value === "admin") {
+      }
+    }
+  },
+  mounted() {
+    console.log(id, password);
   }
 };
 </script>

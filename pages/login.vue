@@ -1,6 +1,9 @@
 <template>
   <div class="screen">
-    <FormConnexion></FormConnexion>
+    <div class="content">
+      <h1>S'identifier</h1>
+      <FormConnexion></FormConnexion>
+    </div>
   </div>
 </template>
 
@@ -11,7 +14,9 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 100px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  z-index: 3;
 }
 .screen {
   width: 100vw;
@@ -19,6 +24,13 @@ h1 {
   background-image: url("/images/loginBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content {
+  margin-top: 200px;
+  z-index: 2;
 }
 .screen::before {
   content: "";
@@ -26,10 +38,12 @@ h1 {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.541);
+  position: absolute;
+  z-index: 2;
 }
 </style>
 <script>
-import FormConnexion from "../components/Form";
+import FormConnexion from "~/components/Form";
 
 export default {
   components: {
