@@ -52,9 +52,6 @@ export default {
       if (id.value === "admin" && password.value === "admin") {
       }
     }
-  },
-  mounted() {
-    console.log(id, password);
   }
 };
 </script>
