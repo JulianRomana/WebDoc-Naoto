@@ -7,9 +7,15 @@
         <p>NAOTO MASTUMURA : LE GARDIEN DES ANIMAUX</p>
       </div>
       <ul>
-        <li>FUKUSHIMA</li>
-        <li>NAOTO MATSUMURA</li>
-        <li>APRES</li>
+        <nuxt-link class="link" to="/fukushima">
+          <li>FUKUSHIMA</li>
+        </nuxt-link>
+        <nuxt-link class="link" to="/naoto">
+          <li>NAOTO MATSUMURA</li>
+        </nuxt-link>
+        <nuxt-link class="link" to="/apres">
+          <li>APRES</li>
+        </nuxt-link>
       </ul>
     </section>
   </div>
@@ -52,9 +58,14 @@
     color: white;
     font-family: League spartan;
     li {
+      color: white;
       border-bottom: 1px solid;
     }
   }
+}
+.link {
+  text-decoration: none;
+  color: white;
 }
 </style>
 <script>
