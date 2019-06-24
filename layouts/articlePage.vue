@@ -6,8 +6,8 @@
           <nuxt-link class="navbar-brand" to="/">Vréel news</nuxt-link>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active">
-            <a to="/articles/articles">Articles</a>
+          <li>
+            <nuxt-link class="navbar-brand" to="/articles/articles">Tous les articles</nuxt-link>
           </li>
           <li>
             <nuxt-link class="navbar-brand" to="/articles/createArticle">Créer</nuxt-link>

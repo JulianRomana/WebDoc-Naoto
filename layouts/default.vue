@@ -3,7 +3,7 @@
     <nuxt/>
   </div>
 </template>
-<style>
+<style scoped >
 .container {
   overflow: hidden;
   width: 100vw;
