@@ -3,8 +3,8 @@
     <ul class="articles__list grid-container">
       <li class="article" v-for="article in this.array">
         <h2 class="article__name">{{article.name}}</h2>
-        <img class="article__img" :src="article.img" alt>
         <p>{{article.content}}</p>
+        <img class="article__img" :src="article.img" alt>
       </li>
     </ul>
   </div>

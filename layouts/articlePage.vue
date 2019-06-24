@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -21,7 +21,13 @@
     <nuxt/>
   </div>
 </template>
-
+<style lang="scss"scoped>
+.container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
 <script>
 export default {};
 </script>
