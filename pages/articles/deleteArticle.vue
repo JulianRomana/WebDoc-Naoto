@@ -5,7 +5,7 @@
         <h2 class="article__name">{{article.name}}</h2>
         <p class="article__content">{{article.content}}</p>
         <img class="article__img" :src="article.img" :alt="article.name + ' image'">
-        <button @click="checking(article.id)" ref="id" :data-id="article.id" class="button"></button>
+        <button @click="checking(article.id)" ref="id" :data-id="article.id" class="deleteButton"></button>
       </li>
     </ul>
   </div>

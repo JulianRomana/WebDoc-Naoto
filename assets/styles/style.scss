@@ -2,7 +2,6 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: sans-serif;
-  background-color: black;
 }
 .nuxt-links {
   font-size: 20px;
@@ -15,10 +14,11 @@ body {
 .fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.fade-enter, .fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   transform: translateX(30px);
   opacity: 0;
+}
 .articles__list {
   display: flex;
   width: 100vw;
@@ -45,7 +45,7 @@ body {
     place-self: center;
   }
 }
-.button {
+.deleteButton {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -63,20 +63,20 @@ body {
   align-self: center;
   place-self: center;
 }
-.button:hover,
-.button:focus {
+.deleteButton:hover,
+.deleteButton:focus {
   background: #ff5959;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
   background: linear-gradient(to bottom, #ff5959, #b62f2f);
   color: #ffffff;
   text-decoration: none;
 }
-.button:active {
+.deleteButton:active {
   background: #982727;
   background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
   background: linear-gradient(to bottom, #982727, #982727);
 }
-.button:before {
+.deleteButton:before {
   content: "\0000a0";
   display: inline-block;
   height: 24px;
