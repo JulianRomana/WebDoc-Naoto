@@ -24,6 +24,7 @@ export default {
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
       this.array = response.data;
+      console.log(this.array);
     });
   }
 };

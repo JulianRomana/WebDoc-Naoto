@@ -20,6 +20,9 @@ body {
   transform: translateX(30px);
   opacity: 0;
 }
+.articles__list {
+  background-color: white;
+}
 .article {
   display: grid;
   margin-left: 8px;
