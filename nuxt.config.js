@@ -14,7 +14,7 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }, { rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" }]
   },
   /*
    ** Customize the progress-bar color
@@ -23,11 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    "@/assets/styles/reset.scss",
-    "@/assets/styles/style.scss",
-    "@/assets/styles/fonts.scss"
-  ],
+  css: ["@/assets/styles/reset.scss", "@/assets/styles/style.scss", "@/assets/styles/fonts.scss"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -43,8 +39,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
-    watch: ["api"]
-  },
-  serverMiddleware: ["~/api/index.js"]
+    extend(config, ctx) {}
+  }
 };

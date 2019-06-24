@@ -59,7 +59,8 @@ export default {
     axios
       .get("http://localhost:7892/api/articles")
       .then(response => (this.array = response.data))
-      .then(response => console.log(this.array));
+      .then(reponse => console.log(this.array));
+    console.log(this.array);
   }
 };
 </script>
