@@ -13,7 +13,7 @@
 <style scoped lang="scss">
 .article {
   display: grid;
-  grid-template-columns: 20% 39% 28% 15%;
+  grid-template-columns: 15% 39% 28% 15%;
 }
 </style>
 <script>
