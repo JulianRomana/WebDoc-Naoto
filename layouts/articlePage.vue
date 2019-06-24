@@ -15,9 +15,6 @@
           <li>
             <nuxt-link class="navbar-brand" to="/articles/deleteArticle">Supprimer un article</nuxt-link>
           </li>
-          <li>
-            <a href="#">Page 3</a>
-          </li>
         </ul>
       </div>
     </nav>
