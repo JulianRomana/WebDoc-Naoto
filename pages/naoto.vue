@@ -44,7 +44,7 @@
   z-index: 0;
 }
 .naotoScreen {
-  background-image: url("../static/images/pic01.jpg");
+  background-image: url("../static/images/naoto.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
