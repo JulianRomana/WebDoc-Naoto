@@ -44,10 +44,23 @@ h1 {
 </style>
 <script>
 import FormConnexion from "~/components/Form";
+const axios = require("axios");
 
 export default {
+  data() {
+    return {
+      array: null
+    };
+  },
   components: {
     FormConnexion
+  },
+  mounted() {
+    axios
+      .get("http://localhost:7892/api/articles")
+      .then(response => (this.array = response.data))
+      .then(reponse => console.log(this.array));
+    console.log(this.array);
   }
 };
 </script>
