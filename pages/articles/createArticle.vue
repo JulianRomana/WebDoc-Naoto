@@ -43,8 +43,14 @@ export default {
         name: "",
         content: "",
         img: ""
-      }
+      },
+      id: ""
     };
+  },
+  mounted() {
+    axios
+      .get("http://localhost:7892/api/articles")
+      .then(response => (this.id = response.data.length));
   },
   methods: {
     checking(e) {
@@ -56,9 +62,11 @@ export default {
         data: {
           name: this.info.name,
           content: this.info.content,
-          img: this.info.img
+          img: this.info.img,
+          id: `${this.id + 1}`
         }
       });
+      this.$router.push("/articles/articles");
     }
   }
 };
