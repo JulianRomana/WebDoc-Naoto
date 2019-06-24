@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
-    <nuxt/>
+   <div class="container">
+    <transition name="fade">
+      <nuxt/>
+    </transition>
   </div>
 </template>
 <style scoped >
