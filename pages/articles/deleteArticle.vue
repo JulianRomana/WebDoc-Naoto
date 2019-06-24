@@ -14,7 +14,6 @@
 .article {
   display: grid;
   grid-template-columns: 15% 39% 28% 15%;
-  grid-row-gap: 50px;
 }
 </style>
 <script>
