@@ -47,9 +47,10 @@ export default {
     };
   },
   methods: {
-    checkForm: e => {
+    checkForm(e) {
       e.preventDefault();
       if (id.value === "admin" && password.value === "admin") {
+        this.$router.push("/articles/articles");
       }
     }
   }

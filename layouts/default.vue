@@ -1,5 +1,5 @@
 <template>
-   <div class="container">
+  <div class="container">
     <transition name="fade">
       <nuxt/>
     </transition>
@@ -10,5 +10,6 @@
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  background-color: black;
 }
 </style>
