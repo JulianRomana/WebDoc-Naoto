@@ -44,8 +44,14 @@ h1 {
 </style>
 <script>
 import FormConnexion from "~/components/Form";
+const axios = require("axios");
 
 export default {
+  data() {
+    return {
+      array: null
+    };
+  },
   components: {
     FormConnexion
   }
