@@ -32,9 +32,10 @@
 }
 figure {
   display: flex;
+  justify-content: space-between;
   height: 70%;
   img {
-    height: 60%;
+    height: 70%;
   }
   figcaption {
     background-color: white;
