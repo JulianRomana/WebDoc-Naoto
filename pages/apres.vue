@@ -23,7 +23,7 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <p>Commencer l'expèrience</p>
+          <p>Commencer l'expérience</p>
         </div>
         <nuxt-link class="link" to="/fukushima">
           <div class="Skip">
@@ -50,6 +50,9 @@
   background-position: center;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 header {
   display: flex;
@@ -96,15 +99,28 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin-left: 3%;
+  width: 100%;
   color: white;
   font-family: League spartan;
 
   .previous {
     padding-top: 260px;
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
   .play {
@@ -120,13 +136,42 @@ nav {
       padding-bottom: 10px;
     }
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      text-transform: uppercase;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
   .Skip {
     padding-top: 260px;
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
 }
@@ -134,5 +179,13 @@ nav {
   text-decoration: none;
   color: white;
   z-index: 1;
+}
+@keyframes beforeAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 </style>

@@ -14,7 +14,7 @@
           <li>NAOTO MATSUMURA</li>
         </nuxt-link>
         <nuxt-link class="link" to="/apres">
-          <li>APRES</li>
+          <li>L'APRES</li>
         </nuxt-link>
       </ul>
     </section>
@@ -59,13 +59,35 @@
     font-family: League spartan;
     li {
       color: white;
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4s;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
 }
 .link {
   text-decoration: none;
   color: white;
+}
+@keyframes beforeAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 </style>
 <script>

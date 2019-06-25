@@ -4,7 +4,7 @@
       <ul class="menu__list">
         <li class="menu__item firstElement">MENU</li>
         <li>
-          <nuxt-link to="/menu" class="menu__item">L'ARCHE DE TOMIOKA</nuxt-link>
+          <nuxt-link to="/menu" class="menu__item">Accueil</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/catastrophe/catastrophe" class="menu__item">FUKUSHIMA</nuxt-link>
