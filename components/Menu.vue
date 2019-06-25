@@ -25,6 +25,10 @@
 .menu__item {
   color: white;
   transition: 0.1s linear;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255, 255, 255, 0.705);
+  }
 }
 .menu__list {
   position: relative;
