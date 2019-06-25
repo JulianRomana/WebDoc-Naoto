@@ -44,7 +44,7 @@
   z-index: 0;
 }
 .fukushimaScreen {
-  background-image: url("../static/images/fukushima.jpg");
+  background-image: url("../static/images/fukushima.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
