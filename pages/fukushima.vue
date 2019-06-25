@@ -49,6 +49,9 @@
   background-position: center;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 header {
   display: flex;
@@ -95,22 +98,35 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
   color: white;
   font-family: League spartan;
 
   .previous {
     padding-top: 260px;
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
   .play {
     display: flex;
     flex-direction: column;
-    padding-left: 70px;
     z-index: 1;
+    margin-left: 70px;
     img:nth-child(1) {
       padding-bottom: 20px;
       height: 185px;
@@ -119,13 +135,42 @@ nav {
       padding-bottom: 10px;
     }
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      text-transform: uppercase;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
   .Skip {
     padding-top: 260px;
     p {
-      border-bottom: 1px solid;
+      position: relative;
+      transition: 0.4 linear;
+      &:hover {
+        font-size: 18px;
+        &::before {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          background-color: white;
+          animation: 0.4s beforeAnimation linear forwards;
+        }
+      }
     }
   }
 }
@@ -133,5 +178,13 @@ nav {
   text-decoration: none;
   color: white;
   z-index: 1;
+}
+@keyframes beforeAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 
 <template>
   <div class="return__button">
-    <p>Retour</p>
+    <p>VIDEO</p>
   </div>
 </template>
 
@@ -14,9 +14,34 @@
   display: flex;
   align-items: center;
   text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
   &::before {
-    content: "<-";
+    content: "◀";
     display: block;
+  }
+  p {
+    font-weight: bold;
+  }
+  &:hover {
+    animation: innerImage 0.3s forwards;
+    p {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+@keyframes innerImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-image: url("../static/images/fukushima.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 </style>
