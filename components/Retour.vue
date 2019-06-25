@@ -24,24 +24,7 @@
     font-weight: bold;
   }
   &:hover {
-    animation: innerImage 0.3s forwards;
-    p {
-      display: none;
-    }
-    &::before {
-      display: none;
-    }
-  }
-}
-@keyframes innerImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    background-image: url("../static/images/fukushima.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.561);
   }
 }
 </style>

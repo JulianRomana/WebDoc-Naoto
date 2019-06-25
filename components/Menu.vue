@@ -33,6 +33,7 @@
 .menu__item {
   color: white;
   transition: 0.1s linear;
+  text-transform: uppercase;
   cursor: pointer;
   &:hover {
     color: rgba(255, 255, 255, 0.705);
