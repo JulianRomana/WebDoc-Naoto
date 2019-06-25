@@ -14,8 +14,12 @@
           </p>
         </figcaption>
       </figure>
+      <aside>
+        <h2>216 Md</h2>
+        <p>D'Euros de dégats</p>
+      </aside>
       <Menu></Menu>
-      <Retour></Retour>
+      <Retour class="returnButton"></Retour>
     </section>
   </div>
 </template>
@@ -28,6 +32,32 @@
   background-image: url("../../static/images/catastrophe/blurryFukushima.png");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+aside {
+  position: absolute;
+  right: 100px;
+  top: 30%;
+  text-align: center;
+  &::after {
+    position: absolute;
+    top: -300px;
+    content: "";
+    width: 2px;
+    background-color: black;
+    animation: beforeSize 2s ease-in-out forwards;
+  }
+  h2 {
+    opacity: 0;
+    font-size: 36px;
+    font-family: League Spartan;
+    animation: textOpacity 0.5s ease-in-out 2s forwards;
+  }
+  p {
+    opacity: 0;
+    font-family: League Spartan;
+    animation: textOpacity 0.5s ease-in-out 2s forwards;
+  }
 }
 .content {
   height: 80%;
@@ -35,12 +65,12 @@
 }
 figure {
   position: relative;
-  width: 1000px;
+  width: 955px;
   height: 100%;
   img {
     position: absolute;
     top: 0;
-    left: 200px;
+    left: 150px;
     z-index: 1;
   }
   figcaption {
@@ -49,24 +79,47 @@ figure {
     border: none;
     position: absolute;
     z-index: 2;
-    bottom: 70px;
-    right: -90px;
-    width: 590px;
+    bottom: 25px;
+    right: -140px;
+    width: 580px;
+    height: 385px;
     font-size: 18px;
     &::first-line {
       font-weight: bold;
+      font-size: 19px;
     }
     p {
       margin: 20px 20px 0px 20px;
-      line-height: 1.6rem;
+      line-height: 1.7rem;
     }
   }
 }
 h1 {
   text-align: left;
-  margin-left: 200px;
+  margin-left: 150px;
   padding: 50px 0px 50px;
   font-size: 20px;
+}
+.returnButton {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+}
+@keyframes beforeSize {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 270px;
+  }
+}
+@keyframes textOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
 <script>

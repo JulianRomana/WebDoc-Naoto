@@ -1,7 +1,7 @@
 
 <template>
   <div class="return__button">
-    <p>Retour</p>
+    <p>VIDEO</p>
   </div>
 </template>
 
@@ -14,9 +14,17 @@
   display: flex;
   align-items: center;
   text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
   &::before {
-    content: "<-";
+    content: "◀";
     display: block;
+  }
+  p {
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.561);
   }
 }
 </style>
