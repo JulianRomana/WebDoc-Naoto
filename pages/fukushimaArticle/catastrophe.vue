@@ -18,6 +18,9 @@
         <h2>216 Md</h2>
         <p>D'Euros de dégats</p>
       </aside>
+      <img class="singleImage" :src="articleImage2" alt>
+      <img class="singleImage" :src="articleImage3" alt>
+      <img class="singleImage" :src="articleImage4" alt>
       <Menu></Menu>
       <Retour class="returnButton"></Retour>
     </section>
@@ -25,6 +28,9 @@
 </template>
 
 <style scoped lang="scss">
+.singleImage {
+  display: none;
+}
 .fukushima__wrapper {
   width: 100vw;
   height: 100vh;
