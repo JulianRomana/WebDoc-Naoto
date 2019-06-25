@@ -3,10 +3,18 @@
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item firstElement">MENU</li>
-        <li class="menu__item">L'ARCHE DE TOMIOKA</li>
-        <li class="menu__item">FUKUSHIMA</li>
-        <li class="menu__item">NAOTO MATSUMURA</li>
-        <li class="menu__item">L'APRES</li>
+        <li>
+          <nuxt-link to="/menu" class="menu__item">L'ARCHE DE TOMIOKA</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/catastrophe/catastrophe" class="menu__item">FUKUSHIMA</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/enfantMiracle/enfantMiracle" class="menu__item">NAOTO MATSUMURA</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/apresArticle/article1" class="menu__item">L'APRES</nuxt-link>
+        </li>
       </ul>
     </nav>
   </div>
