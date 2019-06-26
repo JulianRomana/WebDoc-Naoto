@@ -6,18 +6,14 @@
         <img :src="articleImage1" alt>
         <figcaption>
           <p>
-            Suite au tremblement de terre qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
+            10 minutes après le tremblement de Terre, un tsunami eu lieu. Des vagues entre 10 et 15 mètres, atteignant même plus de 30 mètres de haut se sont abattues sur les côtes pacifiques du Japon.
             <br>
-            <br>Cet incident nucléaire est un accident de niveau 7 sur l’échelle de Richter, et équivaut à celui de Tchernobyl.
+            <br>Celles ci se sont étendues jusqu’à 10km dans les villes de Iwate Fukushima et Miyagi, et ont détruit plus de 600km de côtes.
             <br>
-            <br>Dès les premiers jours et encore aujourd’hui, d'importants rejets sont dispersés dans l'air. Ils se déplacent au gré des vent, et en raison de fuites continues, les rejets touches le littoral proche, les fonds marins et l’Océan Pacifique.
+            <br>Le tsunami est la cause de plus de 90% des dégâts matériels et des morts. Ce tsunami à aussi provoqué une submersion du système de refroidissement de la centrale de Fukushima .
           </p>
         </figcaption>
       </figure>
-      <aside>
-        <h2>216 Md</h2>
-        <p>D'Euros de dégats</p>
-      </aside>
       <img class="singleImage" :src="articleImage2" alt>
       <img class="singleImage" :src="articleImage3" alt>
       <img class="singleImage" :src="articleImage4" alt>
@@ -35,36 +31,12 @@
   width: 100vw;
   height: 100vh;
   background-color: white;
-  background-image: url("../../static/images/catastrophe/blurryFukushima.png");
+  background-image: url("../../static/images/seisme/seismeBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
-aside {
-  position: absolute;
-  right: 100px;
-  top: 30%;
-  text-align: center;
-  &::after {
-    position: absolute;
-    top: -300px;
-    content: "";
-    width: 2px;
-    background-color: black;
-    animation: beforeSize 2s ease-in-out forwards;
-  }
-  h2 {
-    opacity: 0;
-    font-size: 36px;
-    font-family: League Spartan;
-    animation: textOpacity 0.5s ease-in-out 2s forwards;
-  }
-  p {
-    opacity: 0;
-    font-family: League Spartan;
-    animation: textOpacity 0.5s ease-in-out 2s forwards;
-  }
-}
+
 .content {
   height: 80%;
   width: 100%;
@@ -85,10 +57,10 @@ figure {
     border: none;
     position: absolute;
     z-index: 2;
-    bottom: 25px;
-    right: -140px;
+    bottom: 123px;
+    right: -310px;
     width: 580px;
-    height: 385px;
+    height: 330px;
     font-size: 18px;
     &::first-line {
       font-weight: bold;
@@ -148,12 +120,13 @@ export default {
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
-      this.articleName = response.data[1].name;
-      this.articleImage1 = response.data[1].img;
-      this.articleImage2 = response.data[1].img2;
-      this.articleImage3 = response.data[1].img3;
-      this.articleImage4 = response.data[1].img4;
+      console.log(response.data);
+      this.articleName = response.data[4].name;
+      this.articleImage1 = response.data[4].img;
+      this.articleImage2 = response.data[4].img2;
+      this.articleImage3 = response.data[4].img3;
+      this.articleImage4 = response.data[4].img4;
     });
   }
 };
-</script>
+</script>@
