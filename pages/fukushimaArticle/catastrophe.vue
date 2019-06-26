@@ -3,8 +3,8 @@
     <section class="content">
       <h1>{{articleName}}</h1>
       <figure>
-        <img :src="articleImage1" alt>
-        <figcaption>
+        <img class="firstMove" :src="articleImage1" alt>
+        <figcaption class="txt">
           <p>
             Suite au tremblement de terre qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
             <br>
@@ -33,7 +33,7 @@
 }
 .fukushima__wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   background-color: white;
   background-image: url("../../static/images/catastrophe/blurryFukushima.png");
   background-size: cover;
@@ -41,9 +41,9 @@
   position: relative;
 }
 aside {
-  position: absolute;
+  position: fixed;
   right: 100px;
-  top: 30%;
+  top: 50%;
   text-align: center;
   &::after {
     position: absolute;
@@ -74,8 +74,8 @@ figure {
   width: 955px;
   height: 100%;
   img {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 100px;
     left: 150px;
     z-index: 1;
   }
@@ -83,13 +83,13 @@ figure {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px #656565;
     border: none;
-    position: absolute;
-    z-index: 2;
-    bottom: 25px;
-    right: -140px;
+    position: fixed;
+    bottom: 30px;
+    right: 330px;
     width: 580px;
     height: 385px;
     font-size: 18px;
+    z-index: 1;
     &::first-line {
       font-weight: bold;
       font-size: 19px;
@@ -105,10 +105,13 @@ h1 {
   margin-left: 150px;
   padding: 50px 0px 50px;
   font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 30px;
 }
 .returnButton {
-  position: absolute;
-  top: 45%;
+  position: fixed;
+  top: 40%;
   left: 10px;
 }
 @keyframes beforeSize {
@@ -133,6 +136,13 @@ import Menu from "~/components/Menu.vue";
 import axios from "axios";
 import Retour from "~/components/Retour.vue";
 export default {
+  head: {
+    script: [
+      {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+      }
+    ]
+  },
   data() {
     return {
       articleName: null,
@@ -153,6 +163,22 @@ export default {
       this.articleImage2 = response.data[1].img2;
       this.articleImage3 = response.data[1].img3;
       this.articleImage4 = response.data[1].img4;
+    });
+    let first = document.querySelector(".firstMove");
+    let txt = document.querySelector(".txt");
+    $(window).scroll(function(event) {
+      let scroll = $(window).scrollTop();
+      let scrollDiv = scroll / 100;
+      console.log(scrollDiv);
+      let img1 = (first.style.transform = `scale(${1 + scrollDiv})`);
+      let txt1 = (txt.style.transform = `scale(${1 + scrollDiv})`);
+      let size = 3.6;
+      if (scrollDiv > size) {
+        first.style.display = "none";
+        txt.style.display = "none";
+      } else {
+        console.log("pas lourd");
+      }
     });
   }
 };
