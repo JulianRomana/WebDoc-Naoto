@@ -6,18 +6,14 @@
         <img :src="articleImage1" alt>
         <figcaption>
           <p>
-            Suite au tremblement de terre qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
+            Le 11 mars 2011 à 14h56 (heure française), a lieu un séisme de magnitude 9,1 sur l’échelle de Richter. Le séisme de 2011 de la côte Pacifique du Tohoku frappe les côtes Nord Est de l’île de Honshu (l’île principale du Japon).
             <br>
-            <br>Cet incident nucléaire est un accident de niveau 7 sur l’échelle de Richter, et équivaut à celui de Tchernobyl.
+            <br>Malgré la forte magnitude de cet incident, celui-ci eut peu de répercussions sur les villes avoisinant l’épicentre du séisme grâce aux constructions antisismiques japonaises. Il fait partie des cinq séismes meurtriers les plus puissants.
             <br>
-            <br>Dès les premiers jours et encore aujourd’hui, d'importants rejets sont dispersés dans l'air. Ils se déplacent au gré des vent, et en raison de fuites continues, les rejets touches le littoral proche, les fonds marins et l’Océan Pacifique.
+            <br>Ce séisme eut tout de même un impact sur la centrale nucléaire de Fukushima en causant une coupure d’électricité dans la centrale.
           </p>
         </figcaption>
       </figure>
-      <aside>
-        <h2>216 Md</h2>
-        <p>D'Euros de dégats</p>
-      </aside>
       <img class="singleImage" :src="articleImage2" alt>
       <img class="singleImage" :src="articleImage3" alt>
       <img class="singleImage" :src="articleImage4" alt>
@@ -35,36 +31,12 @@
   width: 100vw;
   height: 100vh;
   background-color: white;
-  background-image: url("../../static/images/catastrophe/blurryFukushima.png");
+  background-image: url("../../static/images/seisme/seismeBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
-aside {
-  position: absolute;
-  right: 100px;
-  top: 30%;
-  text-align: center;
-  &::after {
-    position: absolute;
-    top: -300px;
-    content: "";
-    width: 2px;
-    background-color: black;
-    animation: beforeSize 2s ease-in-out forwards;
-  }
-  h2 {
-    opacity: 0;
-    font-size: 36px;
-    font-family: League Spartan;
-    animation: textOpacity 0.5s ease-in-out 2s forwards;
-  }
-  p {
-    opacity: 0;
-    font-family: League Spartan;
-    animation: textOpacity 0.5s ease-in-out 2s forwards;
-  }
-}
+
 .content {
   height: 80%;
   width: 100%;
@@ -148,11 +120,11 @@ export default {
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
-      this.articleName = response.data[1].name;
-      this.articleImage1 = response.data[1].img;
-      this.articleImage2 = response.data[1].img2;
-      this.articleImage3 = response.data[1].img3;
-      this.articleImage4 = response.data[1].img4;
+      this.articleName = response.data[3].name;
+      this.articleImage1 = response.data[3].img;
+      this.articleImage2 = response.data[3].img2;
+      this.articleImage3 = response.data[3].img3;
+      this.articleImage4 = response.data[3].img4;
     });
   }
 };
