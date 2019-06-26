@@ -172,12 +172,13 @@ export default {
       console.log(scrollDiv);
       let img1 = (first.style.transform = `scale(${1 + scrollDiv})`);
       let txt1 = (txt.style.transform = `scale(${1 + scrollDiv})`);
-      let size = 3.6;
+      let size = 3.2;
       if (scrollDiv > size) {
         first.style.display = "none";
         txt.style.display = "none";
       } else {
-        console.log("pas lourd");
+        first.style.display = "block";
+        txt.style.display = "block";
       }
     });
   }
