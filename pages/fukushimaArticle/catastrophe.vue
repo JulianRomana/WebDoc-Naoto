@@ -4,6 +4,9 @@
       <h1>{{articleName}}</h1>
       <figure>
         <img class="firstMove" :src="articleImage1" alt>
+        <img class="secondImg" :src="articleImage2" alt>
+        <img class="thirdImg" :src="articleImage3" alt>
+        <img class="fourthImg" :src="articleImage4" alt>
         <figcaption class="txt">
           <p>
             Suite au tremblement de terre qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
@@ -33,7 +36,7 @@
 }
 .fukushima__wrapper {
   width: 100vw;
-  height: 200vh;
+  height: 265vh;
   background-color: white;
   background-image: url("../../static/images/catastrophe/blurryFukushima.png");
   background-size: cover;
@@ -73,12 +76,34 @@ figure {
   position: relative;
   width: 955px;
   height: 100%;
-  img {
+  img:nth-child(1) {
     position: fixed;
     top: 100px;
     left: 150px;
     z-index: 1;
   }
+  .secondImg {
+    display: none;
+    position: fixed;
+    top: 130px;
+    left: 150px;
+    z-index: 3;
+  }
+  .thirdImg {
+    display: none;
+    position: fixed;
+    top: 270px;
+    left: 500px;
+    z-index: 2;
+  }
+  .fourthImg {
+    display: none;
+    position: fixed;
+    top: 130px;
+    left: 1000px;
+    z-index: 1;
+  }
+
   figcaption {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px #656565;
@@ -166,19 +191,46 @@ export default {
     });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
+    let aside = document.querySelector("aside");
+    let second = document.querySelector(".secondImg");
+    let third = document.querySelector(".thirdImg");
+    let fourth = document.querySelector(".fourthImg");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
       let scrollDiv = scroll / 100;
+      let scrollSecond = scrollDiv - 3;
       console.log(scrollDiv);
-      let img1 = (first.style.transform = `scale(${1 + scrollDiv})`);
-      let txt1 = (txt.style.transform = `scale(${1 + scrollDiv})`);
+      first.style.transform = `scale(${1 + scrollDiv})`;
+      txt.style.transform = `scale(${1 + scrollDiv})`;
       let size = 3.2;
       if (scrollDiv > size) {
         first.style.display = "none";
         txt.style.display = "none";
+        aside.style.display = "none";
+        second.style.display = "block";
+        second.style.transform = `scale(${scrollSecond})`;
+        if (scrollSecond > size) {
+          second.style.display = "none";
+          third.style.display = "block";
+          scrollSecond = scrollSecond - 2.6;
+          third.style.transform = `scale(${scrollSecond})`;
+          if (scrollSecond > size) {
+            third.style.display = "none";
+            fourth.style.display = "block";
+            scrollSecond = scrollSecond - 2.6;
+            fourth.style.transform = `scale(${scrollSecond})`;
+            if (scrollSecond > size) {
+              fourth.style.display = "none";
+            }
+          }
+        }
       } else {
         first.style.display = "block";
         txt.style.display = "block";
+        aside.style.display = "block";
+        second.style.display = "none";
+        third.style.display = "none";
+        fourth.style.display = "none";
       }
     });
   }
