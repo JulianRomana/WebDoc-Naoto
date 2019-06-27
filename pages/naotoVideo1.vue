@@ -1,7 +1,13 @@
 <template>
   <div>
     <section id="firstScreen" class="firstScreen">
-      <video src="../assets/videos/WebPremierePartie.mp4" width="1450" height="750" autoplay></video>
+      <video
+        src="../assets/videos/WebPremierePartie.mp4"
+        width="1450"
+        height="750"
+        autoplay
+        @mouseover="hideSeekBar"
+      ></video>
       <nav class="controls">
         <img class="play-pause" src="../static/images/play.svg" @click="playOrPause">
         <img class="pause-play" src="../static/images/pause.svg" @click="playOrPause">
@@ -38,6 +44,13 @@ export default {
     });
   },
   methods: {
+    hideSeekBar() {
+      const nav = document.querySelector("nav");
+      nav.style.display = "flex";
+      setTimeout(() => {
+        nav.style.display = "none";
+      }, 5000);
+    },
     playOrPause() {
       const video = document.querySelector("video");
       let button = document.querySelector(".play-pause");
@@ -107,6 +120,7 @@ export default {
     align-items: center;
     position: absolute;
     bottom: 75px;
+    animation: Hide 1s;
     img {
       opacity: 1;
     }
@@ -119,6 +133,14 @@ export default {
     .unmute {
       display: none;
     }
+  }
+}
+@keyframes Hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
