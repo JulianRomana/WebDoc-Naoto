@@ -131,10 +131,10 @@ figure {
     box-shadow: 0px 0px 4px 0px #656565;
     border: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 85px;
     right: 200px;
     width: 580px;
-    height: 360px;
+    height: 330px;
     font-size: 18px;
     z-index: 1;
     &::first-line {
