@@ -2,24 +2,24 @@
   <div>
     <section id="apresScreen" class="apresScreen">
       <h1>L’APRÈS</h1>
-      <img class="firstMove" :src="img">
-      <img class="secondImg" :src="img">
-      <img class="thirdImg" :src="img">
-      <img class="fourthImg" :src="img">
+      <img class="firstMove" :src="img1">
+      <img class="secondImg" :src="img2">
+      <img class="thirdImg" :src="img3">
+      <img class="fourthImg" :src="img4">
       <article class="txt">
         <p>{{ txt }}</p>
       </article>
       <article class="txt2">
-        <p>{{ txt }}</p>
+        <p>{{ txt2 }}</p>
       </article>
       <article class="txt3">
-        <p>{{ txt }}</p>
+        <p>{{ txt3 }}</p>
       </article>
       <article class="txt4">
-        <p>{{ txt }}</p>
+        <p>{{ txt4 }}</p>
       </article>
       <article class="txt5">
-        <p>{{ txt }}</p>
+        <p>{{ txt5 }}</p>
       </article>
       <nuxt-link to="videoArticle2">
         <span class="returnButton">Vidéo</span>
@@ -76,6 +76,28 @@
     top: 50px;
     left: 50px;
   }
+  article {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px #656565;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    right: 200px;
+    width: 580px;
+    height: 360px;
+    font-size: 18px;
+    font-family: oswald;
+    z-index: 1;
+    padding: 0px 40px 0px 40px;
+    &::first-line {
+      font-weight: bold;
+      font-size: 19px;
+    }
+    p {
+      margin: 20px 20px 0px 20px;
+      line-height: 1.7rem;
+    }
+  }
   img {
     width: 403px;
     height: 402px;
@@ -117,17 +139,17 @@
     display: none;
     z-index: 3;
     background-color: white;
-    width: 385px;
+    width: 480px;
     height: 321px;
     position: fixed;
     top: 220px;
-    right: 960px;
+    right: 880px;
   }
   .txt3 {
     display: none;
     z-index: 4;
     background-color: white;
-    width: 385px;
+    width: 420px;
     height: 321px;
     position: fixed;
     top: 340px;
@@ -137,7 +159,7 @@
     display: none;
     z-index: 4;
     background-color: white;
-    width: 600px;
+    width: 500px;
     height: 321px;
     position: fixed;
     top: 100px;
@@ -147,7 +169,7 @@
     display: none;
     z-index: 4;
     background-color: white;
-    width: 385px;
+    width: 420px;
     height: 321px;
     position: fixed;
     top: 100px;
@@ -169,15 +191,24 @@ export default {
       img2: null,
       img3: null,
       img4: null,
-      img5: null,
-      img6: null,
-      txt: null
+      txt: null,
+      txt2: null,
+      txt3: null,
+      txt4: null,
+      txt5: null
     };
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
-      this.img = response.data[0].img;
-      this.txt = response.data[0].content;
+      this.img1 = response.data[0].img2;
+      this.img2 = response.data[0].img3;
+      this.img3 = response.data[0].img4;
+      this.img4 = response.data[0].img5;
+      this.txt = response.data[0].content4;
+      this.txt2 = response.data[0].content5;
+      this.txt3 = response.data[0].content6;
+      this.txt4 = response.data[0].content7;
+      this.txt5 = response.data[0].content8;
     });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");

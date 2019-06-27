@@ -2,20 +2,16 @@
   <div>
     <section id="apresScreen" class="apresScreen">
       <h1>L’APRÈS</h1>
-      <img class="firstMove" :src="img">
-      <img class="secondImg" :src="img">
-      <img class="thirdImg" :src="img">
-      <img class="fourthImg" :src="img">
-      <img class="fifthImg" :src="img">
-      <img class="sixthImg" :src="img">
+      <img class="firstMove" :src="img1">
+      <img class="secondImg" :src="img2">
       <article class="txt">
         <p>{{ txt }}</p>
       </article>
       <article class="txt2">
-        <p>{{ txt }}</p>
+        <p>{{ txt2 }}</p>
       </article>
       <article class="txt3">
-        <p>{{ txt }}</p>
+        <p>{{ txt3 }}</p>
       </article>
       <nuxt-link to="videoArticle1">
         <span class="returnButton">suivant</span>
@@ -82,7 +78,9 @@
     width: 580px;
     height: 360px;
     font-size: 18px;
+    font-family: oswald;
     z-index: 1;
+    padding: 0px 40px 0px 40px;
     &::first-line {
       font-weight: bold;
       font-size: 19px;
@@ -147,11 +145,11 @@
     display: none;
     z-index: 3;
     background-color: white;
-    width: 585px;
+    width: 500px;
     height: 321px;
     position: fixed;
     top: 220px;
-    right: 430px;
+    right: 520px;
   }
   .txt3 {
     display: none;
@@ -160,7 +158,7 @@
     width: 400px;
     height: 381px;
     position: fixed;
-    top: 270px;
+    top: 240px;
     right: 120px;
   }
 }
@@ -181,27 +179,28 @@ export default {
       img4: null,
       img5: null,
       img6: null,
-      txt: null
+      txt: null,
+      txt2: null,
+      txt3: null
     };
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
-      this.img = response.data[0].img;
+      console.log(response.data[0]);
+      this.img1 = response.data[0].img;
+      this.img2 = response.data[0].img1;
       this.txt = response.data[0].content;
+      this.txt2 = response.data[0].content2;
+      this.txt3 = response.data[0].content3;
     });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let button = document.querySelector(".returnButton");
     let img2 = document.querySelector(".secondImg");
-    let img3 = document.querySelector(".thirdImg");
-    let img4 = document.querySelector(".fourthImg");
-    let img5 = document.querySelector(".fifthImg");
-    let img6 = document.querySelector(".sixthImg");
     let txt2 = document.querySelector(".txt2");
     let txt3 = document.querySelector(".txt3");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
-      console.log(scroll);
       first.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       if (scroll > 502) {
