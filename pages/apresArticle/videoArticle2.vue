@@ -12,7 +12,9 @@
     <nuxt-link class="start" to="article2">
       <VoirArticle class="watchArticle"></VoirArticle>
     </nuxt-link>
-    <Retour></Retour>
+    <nuxt-link class="start" to="article1">
+      <span class="returnButton">Retour article</span>
+    </nuxt-link>
   </div>
 </template>
 
@@ -64,6 +66,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.returnButton {
+  position: fixed;
+  top: 300px;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  &::before {
+    content: "◀";
+    display: block;
+  }
+  p {
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.561);
+  }
+}
 .firstScreen {
   display: flex;
   flex-direction: column;
