@@ -22,12 +22,37 @@
         <p>Habitants évacués</p>
       </aside>
       <Menu></Menu>
-      <Retour class="returnButton"></Retour>
+      <nuxt-link class="link" to="../fukushimaArticle/catastrophe">
+        <Retour class="returnButton" Retour="Retour"></Retour>
+      </nuxt-link>
+      <nuxt-link class="link" to="../tsunami/tsunami">
+        <VoirArticle class="next" Article="Suite"></VoirArticle>
+      </nuxt-link>
     </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.next {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  padding-left: 13px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.561);
+  }
+}
+.link {
+  color: black;
+}
 .singleImage {
   display: none;
 }
@@ -106,7 +131,7 @@ figure {
     box-shadow: 0px 0px 4px 0px #656565;
     border: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 85px;
     right: 200px;
     width: 580px;
     height: 360px;
@@ -153,11 +178,18 @@ h1 {
 }
 </style>
 <script>
-import Menu from "~/components/Menu.vue";
+import Menu from "~/components/Menu";
 import axios from "axios";
-import Retour from "~/components/Retour.vue";
+import Retour from "~/components/Retour";
+import VoirArticle from "~/components/VoirArticle";
+
 import $ from "jquery";
 export default {
+  components: {
+    Menu,
+    Retour,
+    VoirArticle
+  },
   data() {
     return {
       articleName: null,
@@ -166,10 +198,6 @@ export default {
       articleImage3: null,
       articleImage4: null
     };
-  },
-  components: {
-    Menu,
-    Retour
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {

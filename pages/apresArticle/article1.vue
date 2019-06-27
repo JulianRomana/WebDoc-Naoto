@@ -14,12 +14,12 @@
         <p>{{ txt3 }}</p>
       </article>
       <nuxt-link to="videoArticle2">
-        <VoirArticle class="returnButton">Suivant</VoirArticle>
+        <VoirArticle Article="Suite Vidéo" class="returnButton"></VoirArticle>
       </nuxt-link>
     </section>
     <Menu></Menu>
     <nuxt-link class="return" to="videoArticle1">
-      <Retour class="returnVideo"></Retour>
+      <Retour Retour="Vidéo" class="returnVideo"></Retour>
     </nuxt-link>
   </div>
 </template>
@@ -184,7 +184,8 @@ import $ from "jquery";
 export default {
   components: {
     Menu,
-    Retour
+    Retour,
+    VoirArticle
   },
   data() {
     return {

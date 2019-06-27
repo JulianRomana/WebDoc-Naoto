@@ -22,12 +22,20 @@
         <p>Décès Confirmés</p>
       </aside>
       <Menu></Menu>
-      <Retour class="returnButton"></Retour>
+      <nuxt-link class="link" to="../seisme/seisme">
+        <Retour class="returnButton" Retour="Retour"></Retour>
+      </nuxt-link>
     </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.link {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
 .singleImage {
   display: none;
 }
@@ -35,7 +43,7 @@
   width: 100vw;
   height: 180vh;
   background-color: white;
-  background-image: url("../../static/images/seisme/seismeBackground.png");
+  background-image: url("../../static/images/tsunami/tsunamiBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
