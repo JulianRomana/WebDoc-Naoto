@@ -13,8 +13,8 @@
       <article class="txt3">
         <p>{{ txt3 }}</p>
       </article>
-      <nuxt-link to="videoArticle1">
-        <span class="returnButton">suivant</span>
+      <nuxt-link to="videoArticle2">
+        <VoirArticle class="returnButton">suivant</VoirArticle>
       </nuxt-link>
     </section>
     <Menu></Menu>
@@ -166,6 +166,7 @@
 <script>
 const axios = require("axios");
 import Menu from "~/components/Menu.vue";
+import VoirArticle from "~/components/VoirArticle";
 import $ from "jquery";
 export default {
   components: {

@@ -112,7 +112,14 @@ figcaption {
 }
 .start {
   text-decoration: none;
+  color: white;
   &:hover {
     text-decoration: none;
+    color: white;
   }
+}
+.watchArticle {
+  position: fixed;
+  top: 40%;
+  right: 10px;
 }

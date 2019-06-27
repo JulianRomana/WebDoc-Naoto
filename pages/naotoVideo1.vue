@@ -9,7 +9,9 @@
       </nav>
     </section>
     <Menu></Menu>
-    <VoirArticle></VoirArticle>
+    <nuxt-link class="start" to="./enfantMiracle/enfantMiracle">
+      <VoirArticle class="watchArticle"></VoirArticle>
+    </nuxt-link>
   </div>
 </template>
 
@@ -59,6 +61,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.start {
+  color: white;
+}
+.watchArticle {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+}
 .firstScreen {
   display: flex;
   flex-direction: column;

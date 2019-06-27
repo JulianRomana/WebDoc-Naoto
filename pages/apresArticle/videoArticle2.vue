@@ -1,23 +1,30 @@
 <template>
   <div>
     <section id="firstScreen" class="firstScreen">
-      <video src="../../assets/videos/apres1.mp4" width="1450" height="750" autoplay></video>
+      <video src="../../assets/videos/apres2.mp4" width="1450" height="750" autoplay></video>
       <nav class="controls">
         <img class="play-pause" src="../../static/images/play.svg" @click="playOrPause">
         <input class="seekbar" type="range" min="0" max="100">
         <img class="mute" src="../../static/images/speaker.svg" @click="muteOrUnmute">
       </nav>
     </section>
-    <nuxt-link to="article2" class="nav">voir l'article</nuxt-link>
     <Menu></Menu>
+    <nuxt-link class="start" to="article2">
+      <VoirArticle class="watchArticle"></VoirArticle>
+    </nuxt-link>
+    <Retour></Retour>
   </div>
 </template>
 
 <script>
 import Menu from "~/components/Menu";
+import VoirArticle from "~/components/VoirArticle";
+import Retour from "~~/components/Retour";
 export default {
   components: {
-    Menu
+    Menu,
+    VoirArticle,
+    Retour
   },
   mounted: function() {
     const video = document.querySelector("video");
