@@ -9,7 +9,7 @@
 .see__article {
   width: 70px;
   height: 70px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.561);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
     text-align: center;
   }
   &:hover {
-    background-color: rgba(255, 255, 255, 0.561);
+    background-color: black;
   }
 }
 </style>
