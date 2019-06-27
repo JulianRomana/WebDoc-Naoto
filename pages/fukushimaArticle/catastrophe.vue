@@ -30,6 +30,9 @@
 </template>
 
 <style scoped lang="scss">
+.return {
+  color: black;
+}
 .singleImage {
   display: none;
 }
@@ -105,17 +108,17 @@ figure {
 
   figcaption {
     background-color: rgb(255, 255, 255);
-    box-shadow: 16px 16px 4px -15px #656565;
+    box-shadow: -2px -2px 4px -10px #656565;
     border: none;
     position: fixed;
     bottom: 69px;
     right: 330px;
     width: 580px;
-    height: 395px;
+    height: 385px;
     font-size: 18px;
     z-index: 1;
     p {
-      margin: 20px 40px 40px 40px;
+      margin: 20px 40px 25px 40px;
       line-height: 1.7rem;
       span {
         font-weight: bold;

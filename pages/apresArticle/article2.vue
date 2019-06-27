@@ -110,7 +110,7 @@
     z-index: 1;
     background-color: white;
     width: 585px;
-    height: 321px;
+    height: 230px;
     position: fixed;
     top: 100px;
     right: 240px;
