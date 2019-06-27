@@ -13,7 +13,7 @@
           <nuxt-link to="/naoto" class="menu__item">NAOTO MATSUMURA</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/apres" class="menu__item">L'APRES</nuxt-link>
+          <nuxt-link to="/apres" class="menu__item">LES REVENANTS</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -33,6 +33,7 @@
 .menu__item {
   color: white;
   transition: 0.1s linear;
+  font-family: League spartan;
   text-transform: uppercase;
   cursor: pointer;
   &:hover {

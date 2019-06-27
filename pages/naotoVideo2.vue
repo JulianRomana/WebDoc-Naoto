@@ -8,11 +8,16 @@
         <img class="mute" src="../static/images/speaker.svg" @click="muteOrUnmute">
       </nav>
     </section>
+    <Menu></Menu>
   </div>
 </template>
 
 <script>
+import Menu from "~/components/Menu";
 export default {
+  components: {
+    Menu
+  },
   mounted: function() {
     const video = document.querySelector("video");
     const seekbar = document.querySelector(".seekbar");
@@ -72,7 +77,7 @@ export default {
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    bottom: 50px;
+    bottom: 75px;
 
     img {
       opacity: 1;

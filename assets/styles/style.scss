@@ -102,21 +102,12 @@ figcaption {
   width: 70px;
   height: 70px;
   font-size: 20px;
-  color: white;
+  color: rgba(255, 255, 255, 0.315);
   transition: 0.4 linear;
   text-decoration: none;
   &:hover {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-  }
-  &::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: white;
   }
 }
 .start {

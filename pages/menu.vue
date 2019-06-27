@@ -14,7 +14,7 @@
           <li class="mainArticle">NAOTO MATSUMURA</li>
         </nuxt-link>
         <nuxt-link class="link" to="/apres">
-          <li>L'APRES</li>
+          <li>LES REVENANTS</li>
         </nuxt-link>
       </ul>
     </section>

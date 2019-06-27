@@ -9,10 +9,13 @@
         <img class="logo" src="../static/images/logo.png">
       </header>
       <main>
-        <h2>L’APRÈS</h2>
-        <p>D’autres personnes ont regagnées les terres qu’elles</p>
-        <p>avaient abandonnées après la catastrophe. Aujourd’hui</p>
-        <p>elles vivent, par choix, exposées aux radiations.</p>
+        <h2>LES REVENANTS</h2>
+        <p>
+          D’autres personnes ont regagné les terres qu’elles
+          <br>avaient abandonnées après la catastrophe.
+          <br>Aujourd’hui
+          elles vivent, par choix, exposées aux radiations.
+        </p>
       </main>
       <nav>
         <nuxt-link class="link" to="/naoto">
@@ -23,7 +26,7 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <nuxt-link class="link" to="./apresArticle/videoArticle1">
+          <nuxt-link class="start" to="./apresArticle/videoArticle1">
             <p>Commencer l'expérience</p>
           </nuxt-link>
         </div>
@@ -88,14 +91,15 @@ main {
   justify-content: center;
   color: white;
   font-family: League spartan;
-
   h2 {
     font-size: 50px;
     z-index: 1;
   }
   p {
+    margin-top: 10px;
     font-size: 20px;
     z-index: 1;
+    line-height: 1.5;
   }
 }
 nav {
@@ -104,7 +108,7 @@ nav {
   width: 100%;
   color: white;
   font-family: League spartan;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   .previous {
     padding-top: 260px;
     p {
@@ -180,6 +184,13 @@ nav {
   color: white;
   z-index: 1;
 }
+.start {
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  font-size: 20px;
+}
+
 @keyframes beforeAnimation {
   0% {
     width: 0%;

@@ -9,7 +9,7 @@
         <img class="fourthImg" :src="articleImage4" alt>
         <figcaption class="txt">
           <p>
-            Suite au tremblement de terre qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
+            <span>Suite au tremblement de terre</span> qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
             <br>
             <br>Cet incident nucléaire est un accident de niveau 7 sur l’échelle de Richter, et équivaut à celui de Tchernobyl.
             <br>
@@ -117,13 +117,13 @@ figure {
     height: 385px;
     font-size: 18px;
     z-index: 1;
-    &::first-line {
-      font-weight: bold;
-      font-size: 19px;
-    }
     p {
-      margin: 20px 20px 0px 20px;
+      margin: 20px 40px 0px 40px;
       line-height: 1.7rem;
+      span {
+        font-weight: bold;
+        font-family: oswald;
+      }
     }
   }
 }
