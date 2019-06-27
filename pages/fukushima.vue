@@ -22,7 +22,7 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <p>Commencer l'expèrience</p>
+          <nuxt-link class="start" to="./fukushimaArticle/fukushimaVideo">Commencer la vidéo</nuxt-link>
         </div>
         <nuxt-link class="link" to="/naoto">
           <div class="Skip">
@@ -134,10 +134,11 @@ nav {
     img:nth-child(2) {
       padding-bottom: 10px;
     }
-    p {
+    .start {
       position: relative;
       transition: 0.4 linear;
       text-transform: uppercase;
+      color: white;
       &:hover {
         font-size: 18px;
         &::before {
