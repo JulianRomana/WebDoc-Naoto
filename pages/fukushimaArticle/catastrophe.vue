@@ -162,14 +162,8 @@ h1 {
 import Menu from "~/components/Menu.vue";
 import axios from "axios";
 import Retour from "~/components/Retour.vue";
+import $ from "jquery";
 export default {
-  head: {
-    script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-      }
-    ]
-  },
   data() {
     return {
       articleName: null,

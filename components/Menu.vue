@@ -7,13 +7,13 @@
           <nuxt-link to="/menu" class="menu__item">Accueil</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/fukushimaArticle/catastrophe" class="menu__item">FUKUSHIMA</nuxt-link>
+          <nuxt-link to="/fukushima" class="menu__item">FUKUSHIMA</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/enfantMiracle/enfantMiracle" class="menu__item">NAOTO MATSUMURA</nuxt-link>
+          <nuxt-link to="/naoto" class="menu__item">NAOTO MATSUMURA</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/apresArticle/article1" class="menu__item">L'APRES</nuxt-link>
+          <nuxt-link to="/apres" class="menu__item">L'APRES</nuxt-link>
         </li>
       </ul>
     </nav>
