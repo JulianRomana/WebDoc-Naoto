@@ -5,7 +5,8 @@
       <img :src="arrayImage" alt>
       <figcaption>
         <p>
-          Ce petit garçon est le fils de l'homme le plus irradié du Japon.
+          <span>Ce petit garçon</span> est le fils de l'homme le plus irradié du Japon.
+          <br>
           <br>Son destin est celui d’un moine guerrier. Naoto Matsumura vit en ermite, à moins de 12 kilomètres des réacteurs de la centrale de Fukushima Daiichi. Il se lève à l’aube pour allumer un poêle à mazout et se préparer un petit déjeuner frugal, constitué de natto – du soja fermenté – et de riz blanc. Du café soluble est son seul luxe.
           <br>
           <br>Mais il a rencontré Akiko et toute sa vie en a été transformée. C’était au cours d’une conférence à Tokyo, l’été 2012.« J’ai d’abord pensé que Naoto était un vieil homme, raconte Akiko, parce que ses cheveux étaient complètement blancs. Il évoquait sa vie quotidienne à Tomioka avec beaucoup d’humour. Je ne suis pas immédiatement tombée amoureuse, car je pensais qu’avec ses cheveux blancs il avait plus de 70 ans. Mais j’ai été fascinée par son récit. J’ai pensé que je pourrais l’aider. En septembre 2012, je suis allée pour la première fois dans sa ferme ; j’avais peur des radiations, bien sûr, mais aussi du désert humain et des villes en ruine. Mais j’ai découvert la première qualité de Naoto, sa générosité envers les animaux. » Akiko a une voix douce lorsqu’elle parle japonais, plus affirmée en anglais. Cette ancienne guide touristique est parfaitement bilingue.
@@ -25,43 +26,38 @@
 <style scoped lang="scss">
 .enfantMiracle__wrapper {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   background-color: white;
   background-image: url("../../static/images/enfantBG.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 figure {
   display: flex;
   justify-content: center;
-  position: relative;
-  height: 37.5%;
   img {
-    height: 55%;
-    position: relative;
+    height: 350px;
   }
   figcaption {
     background-color: white;
     font-size: 17px;
     overflow: scroll;
     line-height: 23px;
-    height: 820px;
+    height: 610px;
     width: 700px;
     p {
-      margin: 20px 20px 0px 20px;
+      margin: 20px 20px 5px 20px;
       line-height: 1.7rem;
-    }
-    &::first-line {
-      font-weight: bold;
+      span {
+        font-weight: bold;
+      }
     }
   }
 }
 h1 {
   text-align: left;
-  padding: 80px 0px 50px 40px;
+  padding: 80px 0px 50px 100px;
   font-size: 30px;
-  transition: ease;
 }
 </style>
 <script>
