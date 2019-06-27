@@ -4,7 +4,7 @@ Projet full-stack de fin d'année
 Nuxt ( automatisation des routes ) & Node JS ( communication avec notre api )
 
 ```
-Pour utilisr le projet : npm install
+Pour utiliser le projet : git clone,  npm install
 ```
 
 Il faut aussi avoir l'api : https://github.com/JulianRomana/Web-Doc-API
