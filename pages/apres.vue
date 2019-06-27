@@ -9,10 +9,13 @@
         <img class="logo" src="../static/images/logo.png">
       </header>
       <main>
-        <h2>L’APRÈS</h2>
-        <p>D’autres personnes ont regagnées les terres qu’elles</p>
-        <p>avaient abandonnées après la catastrophe. Aujourd’hui</p>
-        <p>elles vivent, par choix, exposées aux radiations.</p>
+        <h2>LES REVENANTS</h2>
+        <p>
+          D’autres personnes ont regagné les terres qu’elles
+          <br>avaient abandonnées après la catastrophe.
+          <br>Aujourd’hui
+          elles vivent, par choix, exposées aux radiations.
+        </p>
       </main>
       <nav>
         <nuxt-link class="link" to="/naoto">
@@ -88,14 +91,15 @@ main {
   justify-content: center;
   color: white;
   font-family: League spartan;
-
   h2 {
     font-size: 50px;
     z-index: 1;
   }
   p {
+    margin-top: 10px;
     font-size: 20px;
     z-index: 1;
+    line-height: 1.5;
   }
 }
 nav {
@@ -104,7 +108,7 @@ nav {
   width: 100%;
   color: white;
   font-family: League spartan;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   .previous {
     padding-top: 260px;
     p {

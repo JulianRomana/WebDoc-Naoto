@@ -10,13 +10,15 @@
       </header>
       <main>
         <h2>FUKUSHIMA</h2>
-        <p>Un retour sur le déroulement de la</p>
-        <p>catastrophe du 11 Mars 2011</p>
+        <p>
+          Un retour sur le déroulement de la
+          <br>catastrophe du 11 Mars 2011
+        </p>
       </main>
       <nav>
         <nuxt-link class="link" to="/apres">
           <div class="previous">
-            <p>APRES</p>
+            <p>LES REVENANTS</p>
           </div>
         </nuxt-link>
         <div class="play">
@@ -93,6 +95,7 @@ main {
   p {
     font-size: 20px;
     z-index: 1;
+    line-height: 1.5;
   }
 }
 nav {
@@ -101,7 +104,7 @@ nav {
   width: 100%;
   color: white;
   font-family: League spartan;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   .previous {
     padding-top: 260px;
     p {

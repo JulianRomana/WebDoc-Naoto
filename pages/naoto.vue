@@ -10,8 +10,10 @@
       </header>
       <main>
         <h2>NAOTO MATSUMURA</h2>
-        <p>Un webdocumentaire narrant le parcours</p>
-        <p>d’un homme revenu vivre dans son village irradié.</p>
+        <p>
+          Un webdocumentaire narrant le parcours
+          <br>d’un homme revenu vivre dans son village irradié.
+        </p>
       </main>
       <nav>
         <nuxt-link class="link" to="/fukushima">
@@ -26,7 +28,7 @@
         </div>
         <nuxt-link class="link" to="/apres">
           <div class="Skip">
-            <p>APRES</p>
+            <p>LES REVENANTS</p>
           </div>
         </nuxt-link>
       </nav>
@@ -92,6 +94,7 @@ main {
   p {
     font-size: 20px;
     z-index: 1;
+    line-height: 1.5;
   }
 }
 nav {
