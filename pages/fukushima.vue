@@ -23,7 +23,9 @@
         </nuxt-link>
         <div class="play">
           <img src="../static/images/line.svg">
-          <img src="../static/images/arrow2.svg">
+          <nuxt-link class="watchVideo" to="./fukushimaArticle/fukushimaVideo">
+            <img src="../static/images/arrow2.svg">
+          </nuxt-link>
           <nuxt-link class="start" to="./fukushimaArticle/fukushimaVideo">Commencer l'expérience</nuxt-link>
         </div>
         <nuxt-link class="link" to="/naoto">
@@ -104,7 +106,7 @@ nav {
   width: 100%;
   color: white;
   font-family: League spartan;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 40px 0px 40px;
   .previous {
     padding-top: 260px;
     p {
@@ -133,8 +135,12 @@ nav {
       padding-bottom: 20px;
       height: 185px;
     }
-    img:nth-child(2) {
-      padding-bottom: 20px;
+    .watchVideo {
+      text-align: center;
+      img {
+        padding-bottom: 20px;
+        height: 65px;
+      }
     }
     .start {
       position: relative;

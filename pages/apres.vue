@@ -25,7 +25,9 @@
         </nuxt-link>
         <div class="play">
           <img src="../static/images/line.svg">
-          <img src="../static/images/arrow2.svg">
+          <nuxt-link class="watchVideo" to="./apresArticle/videoArticle1">
+            <img src="../static/images/arrow2.svg">
+          </nuxt-link>
           <nuxt-link class="start" to="./apresArticle/videoArticle1">
             <p>Commencer l'expérience</p>
           </nuxt-link>
@@ -108,7 +110,7 @@ nav {
   width: 100%;
   color: white;
   font-family: League spartan;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 40px 0px 40px;
   .previous {
     padding-top: 260px;
     p {
@@ -137,8 +139,12 @@ nav {
       padding-bottom: 20px;
       height: 185px;
     }
-    img:nth-child(2) {
-      padding-bottom: 20px;
+    .watchVideo {
+      text-align: center;
+      img {
+        padding-bottom: 20px;
+        height: 65px;
+      }
     }
     p {
       position: relative;
