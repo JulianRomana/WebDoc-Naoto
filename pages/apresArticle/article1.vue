@@ -18,9 +18,18 @@
       </nuxt-link>
     </section>
     <Menu></Menu>
+    <nuxt-link class="return" to="videoArticle1">
+      <Retour class="returnVideo"></Retour>
+    </nuxt-link>
   </div>
 </template>
 <style lang="scss" scoped>
+.returnVideo {
+  position: fixed;
+  top: 40%;
+  left: 10px;
+}
+
 .apresScreen::before {
   content: "";
   display: block;
@@ -167,10 +176,12 @@
 const axios = require("axios");
 import Menu from "~/components/Menu.vue";
 import VoirArticle from "~/components/VoirArticle";
+import Retour from "~/components/Retour";
 import $ from "jquery";
 export default {
   components: {
-    Menu
+    Menu,
+    Retour
   },
   data() {
     return {
