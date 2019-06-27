@@ -94,3 +94,34 @@ h1 {
 figcaption {
   font-family: Times, serif;
 }
+.nav {
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 43%;
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+  color: white;
+  transition: 0.4 linear;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }
+}
+.start {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
