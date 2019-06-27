@@ -98,16 +98,15 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0px 10px 0px 10px;
   color: white;
   font-family: League spartan;
-
   .previous {
     padding-top: 260px;
     p {
       position: relative;
       transition: 0.4 linear;
       &:hover {
-        font-size: 18px;
         &::before {
           content: "";
           display: block;
@@ -131,7 +130,7 @@ nav {
       height: 185px;
     }
     img:nth-child(2) {
-      padding-bottom: 10px;
+      padding-bottom: 20px;
     }
     .start {
       position: relative;
@@ -139,7 +138,6 @@ nav {
       text-transform: uppercase;
       color: white;
       &:hover {
-        font-size: 18px;
         &::before {
           content: "";
           display: block;
@@ -159,7 +157,6 @@ nav {
       position: relative;
       transition: 0.4 linear;
       &:hover {
-        font-size: 18px;
         &::before {
           content: "";
           display: block;

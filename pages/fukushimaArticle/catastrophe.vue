@@ -48,7 +48,7 @@
 aside {
   position: fixed;
   right: 100px;
-  top: 50%;
+  top: 35%;
   text-align: center;
   &::after {
     position: absolute;
