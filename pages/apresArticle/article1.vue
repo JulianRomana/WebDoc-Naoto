@@ -72,6 +72,26 @@
     top: 50px;
     left: 50px;
   }
+  article {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px #656565;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    right: 200px;
+    width: 580px;
+    height: 360px;
+    font-size: 18px;
+    z-index: 1;
+    &::first-line {
+      font-weight: bold;
+      font-size: 19px;
+    }
+    p {
+      margin: 20px 20px 0px 20px;
+      line-height: 1.7rem;
+    }
+  }
   img {
     width: 403px;
     height: 402px;
