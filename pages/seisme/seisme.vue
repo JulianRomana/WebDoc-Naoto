@@ -134,7 +134,7 @@ figure {
     bottom: 85px;
     right: 200px;
     width: 580px;
-    height: 330px;
+    height: 360px;
     font-size: 18px;
     z-index: 1;
     &::first-line {
