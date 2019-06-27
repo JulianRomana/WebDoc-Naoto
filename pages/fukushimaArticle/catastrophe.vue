@@ -21,9 +21,6 @@
         <h2>216 Md</h2>
         <p>D'Euros de dégats</p>
       </aside>
-      <img class="singleImage" :src="articleImage2" alt>
-      <img class="singleImage" :src="articleImage3" alt>
-      <img class="singleImage" :src="articleImage4" alt>
       <Menu></Menu>
       <Retour class="returnButton"></Retour>
     </section>
