@@ -17,7 +17,7 @@
       <article class="txt3">
         <p>{{ txt }}</p>
       </article>
-      <nuxt-link to="fukushimaVideo">
+      <nuxt-link to="videoArticle1">
         <span class="returnButton">suivant</span>
       </nuxt-link>
     </section>
@@ -71,6 +71,26 @@
     position: fixed;
     top: 50px;
     left: 50px;
+  }
+  article {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px #656565;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    right: 200px;
+    width: 580px;
+    height: 360px;
+    font-size: 18px;
+    z-index: 1;
+    &::first-line {
+      font-weight: bold;
+      font-size: 19px;
+    }
+    p {
+      margin: 20px 20px 0px 20px;
+      line-height: 1.7rem;
+    }
   }
   img {
     width: 403px;
@@ -148,14 +168,8 @@
 <script>
 const axios = require("axios");
 import Menu from "~/components/Menu.vue";
+import $ from "jquery";
 export default {
-  head: {
-    script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-      }
-    ]
-  },
   components: {
     Menu
   },
