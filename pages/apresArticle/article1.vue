@@ -14,7 +14,7 @@
         <p>{{ txt3 }}</p>
       </article>
       <nuxt-link to="videoArticle2">
-        <VoirArticle class="returnButton">suivant</VoirArticle>
+        <VoirArticle class="returnButton">SUIVANT</VoirArticle>
       </nuxt-link>
     </section>
     <Menu></Menu>
