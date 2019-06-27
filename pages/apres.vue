@@ -23,7 +23,9 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <p>Commencer l'expérience</p>
+          <nuxt-link class="link" to="./apresArticle/videoArticle1">
+            <p>Commencer l'expérience</p>
+          </nuxt-link>
         </div>
         <nuxt-link class="link" to="/fukushima">
           <div class="Skip">
