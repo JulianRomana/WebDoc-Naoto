@@ -11,23 +11,39 @@
           <li>FUKUSHIMA</li>
         </nuxt-link>
         <nuxt-link class="link" to="/naoto">
-          <li>NAOTO MATSUMURA</li>
+          <li class="mainArticle">NAOTO MATSUMURA</li>
         </nuxt-link>
         <nuxt-link class="link" to="/apres">
           <li>L'APRES</li>
         </nuxt-link>
       </ul>
     </section>
+    <audio :src="require('@/assets/audio/cigales.mp3')" autoplay></audio>
   </div>
 </template>
 <style scoped lang="scss">
+.mainArticle {
+  font-size: 20px;
+  &:hover {
+    font-size: 22px;
+    &::before {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+      animation: 0.4s beforeAnimation linear forwards;
+    }
+  }
+}
 .menuScreen {
   background-image: url("../static/images/menuFond.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100vw;
-
   .logo {
     width: 200px;
     position: absolute;
@@ -61,8 +77,7 @@
       color: white;
       position: relative;
       transition: 0.4s;
-      &:hover {
-        font-size: 18px;
+      &:hover:not(.mainArticle) {
         &::before {
           content: "";
           display: block;

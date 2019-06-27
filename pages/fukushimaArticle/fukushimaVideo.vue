@@ -52,18 +52,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.nav {
-  position: absolute;
-  text-align: center;
-  right: 0;
-  top: 43%;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: white;
-  font-size: 20px;
-  color: black;
-}
 .firstScreen {
   display: flex;
   flex-direction: column;

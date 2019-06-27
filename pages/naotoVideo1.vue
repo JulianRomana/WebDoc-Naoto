@@ -8,6 +8,7 @@
         <img class="mute" src="../static/images/speaker.svg" @click="muteOrUnmute">
       </nav>
     </section>
+    <nuxt-link to="/enfantMiracle/enfantMiracle" class="nav">voir l'article</nuxt-link>
   </div>
 </template>
 
