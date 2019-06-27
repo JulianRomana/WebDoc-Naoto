@@ -145,7 +145,7 @@
     z-index: 1;
     background-color: white;
     width: 585px;
-    height: 321px;
+    height: 240px;
     position: fixed;
     top: 180px;
     right: 700px;
@@ -155,7 +155,7 @@
     z-index: 3;
     background-color: white;
     width: 500px;
-    height: 321px;
+    height: 310px;
     position: fixed;
     top: 220px;
     right: 520px;
@@ -165,10 +165,10 @@
     z-index: 4;
     background-color: white;
     width: 400px;
-    height: 381px;
+    height: 260px;
     position: fixed;
-    top: 240px;
-    right: 120px;
+    top: 340px;
+    right: 110px;
   }
 }
 </style>
@@ -187,10 +187,6 @@ export default {
     return {
       img1: null,
       img2: null,
-      img3: null,
-      img4: null,
-      img5: null,
-      img6: null,
       txt: null,
       txt2: null,
       txt3: null
@@ -199,11 +195,11 @@ export default {
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
       console.log(response.data[0]);
-      this.img1 = response.data[0].img;
-      this.img2 = response.data[0].img1;
-      this.txt = response.data[0].content;
-      this.txt2 = response.data[0].content2;
-      this.txt3 = response.data[0].content3;
+      this.img1 = response.data[0].img2;
+      this.img2 = response.data[0].img6;
+      this.txt = response.data[0].content4;
+      this.txt2 = response.data[0].content5;
+      this.txt3 = response.data[0].content6;
     });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");

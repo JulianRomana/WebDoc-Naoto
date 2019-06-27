@@ -109,7 +109,7 @@
     display: none;
     position: fixed;
     top: 30px;
-    left: 350px;
+    left: 250px;
     z-index: 3;
   }
   .thirdImg {
@@ -122,8 +122,8 @@
   .fourthImg {
     display: none;
     position: fixed;
-    top: 277px;
-    left: 610px;
+    top: 240px;
+    left: 580px;
     z-index: 2;
   }
   .txt {
@@ -140,9 +140,9 @@
     z-index: 3;
     background-color: white;
     width: 480px;
-    height: 321px;
+    height: 200px;
     position: fixed;
-    top: 220px;
+    top: 420px;
     right: 880px;
   }
   .txt3 {
@@ -150,16 +150,16 @@
     z-index: 4;
     background-color: white;
     width: 420px;
-    height: 321px;
+    height: 200px;
     position: fixed;
-    top: 340px;
-    right: 300px;
+    top: 460px;
+    right: 370px;
   }
   .txt4 {
     display: none;
     z-index: 4;
     background-color: white;
-    width: 500px;
+    width: 460px;
     height: 321px;
     position: fixed;
     top: 100px;
@@ -200,13 +200,13 @@ export default {
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
-      this.img1 = response.data[0].img2;
-      this.img2 = response.data[0].img3;
-      this.img3 = response.data[0].img4;
-      this.img4 = response.data[0].img5;
-      this.txt = response.data[0].content4;
-      this.txt2 = response.data[0].content5;
-      this.txt3 = response.data[0].content6;
+      this.img1 = response.data[0].img1;
+      this.img2 = response.data[0].img4;
+      this.img3 = response.data[0].img5;
+      this.img4 = response.data[0].img3;
+      this.txt = response.data[0].content;
+      this.txt2 = response.data[0].content2;
+      this.txt3 = response.data[0].content3;
       this.txt4 = response.data[0].content7;
       this.txt5 = response.data[0].content8;
     });
