@@ -974,9 +974,8 @@ h1 {
   height: 90%;
   margin-left: 50px;
 }
-.japan {
-  position: relative;
-  &::before {
+
+.japan::before {
     content: "";
     display:  block;
     width: 100px;
@@ -984,7 +983,6 @@ h1 {
     border-radius: 50%;
     background-color: #AECC58;
   }
-}
 </style>
 
 <script>
