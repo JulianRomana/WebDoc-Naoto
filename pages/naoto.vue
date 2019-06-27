@@ -22,7 +22,7 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <nuxt-link class="start" to="/naotoVideo">Commencer L'expérience</nuxt-link>
+          <nuxt-link class="start" to="/naotoVideo1">Commencer L'expérience</nuxt-link>
         </div>
         <nuxt-link class="link" to="/apres">
           <div class="Skip">

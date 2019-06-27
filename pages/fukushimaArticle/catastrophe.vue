@@ -22,12 +22,17 @@
         <p>D'Euros de dégats</p>
       </aside>
       <Menu></Menu>
-      <Retour class="returnButton"></Retour>
+      <nuxt-link class="return" to="fukushimaVideo">
+        <Retour class="returnButton"></Retour>
+      </nuxt-link>
     </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.return {
+  color: black;
+}
 .singleImage {
   display: none;
 }
@@ -106,7 +111,7 @@ figure {
     box-shadow: 0px 0px 4px 0px #656565;
     border: none;
     position: fixed;
-    bottom: 30px;
+    bottom: 69px;
     right: 330px;
     width: 580px;
     height: 385px;
