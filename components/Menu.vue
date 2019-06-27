@@ -7,7 +7,7 @@
           <nuxt-link to="/menu" class="menu__item">Accueil</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/catastrophe/catastrophe" class="menu__item">FUKUSHIMA</nuxt-link>
+          <nuxt-link to="/fukushimaArticle/catastrophe" class="menu__item">FUKUSHIMA</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/enfantMiracle/enfantMiracle" class="menu__item">NAOTO MATSUMURA</nuxt-link>
