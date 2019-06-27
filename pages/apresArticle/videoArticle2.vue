@@ -13,7 +13,11 @@
 </template>
 
 <script>
+import Menu from "~/components/Menu";
 export default {
+  components: {
+    Menu
+  },
   mounted: function() {
     const video = document.querySelector("video");
     const seekbar = document.querySelector(".seekbar");
