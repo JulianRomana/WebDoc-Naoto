@@ -14,7 +14,7 @@
         <p>{{ txt3 }}</p>
       </article>
       <nuxt-link to="videoArticle2">
-        <VoirArticle class="returnButton">suivant</VoirArticle>
+        <VoirArticle class="returnButton">Suivant</VoirArticle>
       </nuxt-link>
     </section>
     <Menu></Menu>
@@ -29,7 +29,14 @@
   top: 40%;
   left: 10px;
 }
-
+.return {
+  color: black;
+  background-color: white;
+  &:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.253);
+  }
+}
 .apresScreen::before {
   content: "";
   display: block;
@@ -60,10 +67,6 @@
     text-align: center;
     transition: 0.3s ease-in-out;
     cursor: pointer;
-    &::after {
-      content: "▶";
-      display: block;
-    }
     p {
       font-weight: bold;
     }

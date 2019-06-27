@@ -1,7 +1,7 @@
 
 <template>
   <div class="see__article">
-    <p>Voir l'article</p>
+    <p>Voir l'Article</p>
   </div>
 </template>
 

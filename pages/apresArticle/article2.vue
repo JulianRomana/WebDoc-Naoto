@@ -21,14 +21,19 @@
       <article class="txt5">
         <p>{{ txt5 }}</p>
       </article>
-      <nuxt-link to="videoArticle2">
-        <span class="returnButton">Vidéo</span>
+      <nuxt-link class="return" to="videoArticle2">
+        <Retour class="returnButton">Vidéo</Retour>
       </nuxt-link>
     </section>
     <Menu></Menu>
   </div>
 </template>
 <style lang="scss" scoped>
+.returnButton {
+  position: fixed;
+  top: 40%;
+  left: 0;
+}
 .apresScreen::before {
   content: "";
   display: block;
@@ -45,31 +50,6 @@
   height: 245vh;
   width: 100vw;
   font-family: league spartan;
-  .returnButton {
-    position: fixed;
-    top: 300px;
-    left: 0;
-    width: 70px;
-    height: 70px;
-    color: black;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    &::before {
-      content: "◀";
-      display: block;
-    }
-    p {
-      font-weight: bold;
-    }
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.561);
-    }
-  }
   h1 {
     font-size: 25px;
     position: fixed;
@@ -180,10 +160,12 @@
 <script>
 const axios = require("axios");
 import Menu from "~/components/Menu.vue";
+import Retour from "~/components/Retour";
 import $ from "jquery";
 export default {
   components: {
-    Menu
+    Menu,
+    Retour
   },
   data() {
     return {

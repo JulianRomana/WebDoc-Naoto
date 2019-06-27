@@ -9,11 +9,11 @@
       </nav>
     </section>
     <Menu></Menu>
+    <nuxt-link class="start" to="article1">
+      <Retour class="returnButton">Retour Article</Retour>
+    </nuxt-link>
     <nuxt-link class="start" to="article2">
       <VoirArticle class="watchArticle"></VoirArticle>
-    </nuxt-link>
-    <nuxt-link class="start" to="article1">
-      <span class="returnButton">Retour article</span>
     </nuxt-link>
   </div>
 </template>
@@ -68,27 +68,20 @@ export default {
 <style scoped lang="scss">
 .returnButton {
   position: fixed;
-  top: 300px;
-  left: 0;
+  top: 40%;
+  left: 10px;
   width: 70px;
   height: 70px;
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.561);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
   text-align: center;
   transition: 0.3s ease-in-out;
+  font-weight: bold;
   cursor: pointer;
-  &::before {
-    content: "◀";
-    display: block;
-  }
-  p {
-    font-weight: bold;
-  }
+  color: white;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.561);
+    background-color: black;
   }
 }
 .firstScreen {
