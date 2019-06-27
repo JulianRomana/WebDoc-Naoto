@@ -15,7 +15,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    setTimeout(() => {
+      this.$router.push("/menu");
+    }, 32000);
+  }
+};
 </script>
 
 <style scoped lang="scss">
