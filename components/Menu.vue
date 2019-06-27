@@ -33,6 +33,7 @@
 .menu__item {
   color: white;
   transition: 0.1s linear;
+  font-family: League spartan;
   text-transform: uppercase;
   cursor: pointer;
   &:hover {

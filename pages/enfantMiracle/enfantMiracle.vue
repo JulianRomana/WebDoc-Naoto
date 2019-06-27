@@ -46,10 +46,11 @@ figure {
     height: 610px;
     width: 700px;
     p {
-      margin: 20px 20px 5px 20px;
+      margin: 40px 40px 5px 40px;
       line-height: 1.7rem;
       span {
         font-weight: bold;
+        font-family: oswald;
       }
     }
   }

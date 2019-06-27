@@ -23,7 +23,7 @@
         <div class="play">
           <img src="../static/images/line.svg">
           <img src="../static/images/arrow2.svg">
-          <nuxt-link class="link" to="./apresArticle/videoArticle1">
+          <nuxt-link class="start" to="./apresArticle/videoArticle1">
             <p>Commencer l'expérience</p>
           </nuxt-link>
         </div>
@@ -180,6 +180,13 @@ nav {
   color: white;
   z-index: 1;
 }
+.start {
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  font-size: 20px;
+}
+
 @keyframes beforeAnimation {
   0% {
     width: 0%;

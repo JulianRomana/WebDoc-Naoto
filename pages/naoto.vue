@@ -137,6 +137,7 @@ nav {
       transition: 0.4 linear;
       text-transform: uppercase;
       color: white;
+      font-size: 20px;
       &:hover {
         &::before {
           content: "";
