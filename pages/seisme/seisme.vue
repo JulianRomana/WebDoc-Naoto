@@ -17,6 +17,10 @@
           </p>
         </figcaption>
       </figure>
+      <aside>
+        <h2>177 500</h2>
+        <p>Habitants évacués</p>
+      </aside>
       <Menu></Menu>
       <Retour class="returnButton"></Retour>
     </section>
@@ -36,7 +40,32 @@
   background-repeat: no-repeat;
   position: relative;
 }
-
+aside {
+  display: none;
+  position: fixed;
+  left: 100px;
+  bottom: 30%;
+  text-align: center;
+  &::after {
+    position: absolute;
+    top: 70px;
+    content: "";
+    width: 2px;
+    background-color: black;
+    animation: beforeSize 2s ease-in-out forwards;
+  }
+  h2 {
+    opacity: 0;
+    font-size: 36px;
+    font-family: League Spartan;
+    animation: textOpacity 0.5s ease-in-out forwards;
+  }
+  p {
+    opacity: 0;
+    font-family: League Spartan;
+    animation: textOpacity 0.5s ease-in-out forwards;
+  }
+}
 .content {
   height: 80%;
   width: 100%;
@@ -161,6 +190,7 @@ export default {
     let second = document.querySelector(".secondImg");
     let third = document.querySelector(".thirdImg");
     let fourth = document.querySelector(".fourthImg");
+    let aside = document.querySelector("aside");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
       let scrollDiv = scroll / 100;
@@ -172,6 +202,7 @@ export default {
       if (scrollDiv > size) {
         first.style.display = "none";
         txt.style.display = "none";
+        aside.style.display = "block";
         second.style.display = "block";
         second.style.transform = `scale(${scrollSecond})`;
         if (scrollSecond > size) {
@@ -194,6 +225,7 @@ export default {
         txt.style.display = "block";
         second.style.display = "none";
         third.style.display = "none";
+        aside.style.display = "none";
         fourth.style.display = "none";
       }
     });
