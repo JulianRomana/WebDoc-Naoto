@@ -10,7 +10,7 @@
     </section>
     <Menu></Menu>
     <nuxt-link class="start" to="article1">
-      <VoirArticle class="watchArticle"></VoirArticle>
+      <VoirArticle Article="Voir l'Article" class="watchArticle"></VoirArticle>
     </nuxt-link>
   </div>
 </template>

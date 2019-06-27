@@ -10,10 +10,10 @@
     </section>
     <Menu></Menu>
     <nuxt-link class="start" to="article1">
-      <Retour class="returnButton">Retour Article</Retour>
+      <Retour Retour="Retour Article" class="returnButton">Retour Article</Retour>
     </nuxt-link>
     <nuxt-link class="start" to="article2">
-      <VoirArticle class="watchArticle"></VoirArticle>
+      <VoirArticle Article="Article Suivant" class="watchArticle"></VoirArticle>
     </nuxt-link>
   </div>
 </template>
@@ -80,6 +80,9 @@ export default {
   font-weight: bold;
   cursor: pointer;
   color: white;
+  p {
+    padding-top: 21px;
+  }
   &:hover {
     background-color: black;
   }

@@ -22,12 +22,20 @@
         <p>Décès Confirmés</p>
       </aside>
       <Menu></Menu>
-      <Retour class="returnButton"></Retour>
+      <nuxt-link class="link" to="../seisme/seisme">
+        <Retour class="returnButton" Retour="Retour"></Retour>
+      </nuxt-link>
     </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.link {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
 .singleImage {
   display: none;
 }

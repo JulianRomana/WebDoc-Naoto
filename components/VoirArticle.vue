@@ -1,7 +1,7 @@
 
 <template>
   <div class="see__article">
-    <p>Voir l'Article</p>
+    <p>{{Article}}</p>
   </div>
 </template>
 
@@ -27,6 +27,6 @@
 </style>
 <script>
 export default {
-  props: ["VoirArticle"]
+  props: ["Article"]
 };
 </script>

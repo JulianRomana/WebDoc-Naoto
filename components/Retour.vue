@@ -1,7 +1,7 @@
 
 <template>
   <div class="return__button">
-    <p>Video</p>
+    <p>{{Retour}}</p>
   </div>
 </template>
 
