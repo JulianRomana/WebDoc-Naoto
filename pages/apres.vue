@@ -38,6 +38,7 @@
           </div>
         </nuxt-link>
       </nav>
+      <audio :src="require('@/assets/audio/sonAmbiance.mp3')" autoplay loop></audio>
     </section>
   </div>
 </template>
