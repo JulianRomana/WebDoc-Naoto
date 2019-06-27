@@ -9,6 +9,7 @@
       </nav>
     </section>
     <nuxt-link to="article2" class="nav">voir l'article</nuxt-link>
+    <Menu></Menu>
   </div>
 </template>
 
