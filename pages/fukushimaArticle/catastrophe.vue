@@ -30,9 +30,6 @@
 </template>
 
 <style scoped lang="scss">
-.return {
-  color: black;
-}
 .singleImage {
   display: none;
 }

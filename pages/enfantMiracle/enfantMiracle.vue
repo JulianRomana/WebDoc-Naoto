@@ -22,11 +22,19 @@
       </figcaption>
     </figure>
     <Menu></Menu>
+    <nuxt-link class="return" to="../naotoVideo1">
+      <Retour class="returnVideo"></Retour>
+    </nuxt-link>
   </div>
 </template>
 
 
 <style scoped lang="scss">
+.returnVideo {
+  position: fixed;
+  top: 40%;
+  left: 10px;
+}
 .enfantMiracle__wrapper {
   width: 100vw;
   height: 100vh;
@@ -66,17 +74,19 @@ h1 {
 </style>
 <script>
 import Menu from "~/components/Menu.vue";
+import Retour from "~/components/Retour";
 import axios from "axios";
 export default {
+  components: {
+    Retour,
+    Menu
+  },
   data() {
     return {
       arrayName: null,
       arrayContent: null,
       arrayImage: null
     };
-  },
-  components: {
-    Menu
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {

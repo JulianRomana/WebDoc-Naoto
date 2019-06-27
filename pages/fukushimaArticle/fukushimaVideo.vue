@@ -8,16 +8,20 @@
         <img class="mute" src="../../static/images/speaker.svg" @click="muteOrUnmute">
       </nav>
     </section>
-    <nuxt-link to="catastrophe" class="nav">voir l'article</nuxt-link>
+    <nuxt-link class="start" to="catastrophe">
+      <VoirArticle></VoirArticle>
+    </nuxt-link>
     <Menu></Menu>
   </div>
 </template>
 
 <script>
 import Menu from "~/components/Menu";
+import VoirArticle from "~/components/VoirArticle";
 export default {
   components: {
-    Menu
+    Menu,
+    VoirArticle
   },
   mounted: function() {
     const video = document.querySelector("video");
@@ -86,5 +90,10 @@ export default {
       width: 90%;
     }
   }
+}
+.start {
+  position: fixed;
+  top: 40%;
+  right: 10px;
 }
 </style>
