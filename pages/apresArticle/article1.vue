@@ -17,7 +17,7 @@
       <article class="txt3">
         <p>{{ txt }}</p>
       </article>
-      <nuxt-link to="fukushimaVideo">
+      <nuxt-link to="videoArticle1">
         <span class="returnButton">suivant</span>
       </nuxt-link>
     </section>
@@ -148,14 +148,8 @@
 <script>
 const axios = require("axios");
 import Menu from "~/components/Menu.vue";
+import $ from "jquery";
 export default {
-  head: {
-    script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-      }
-    ]
-  },
   components: {
     Menu
   },
