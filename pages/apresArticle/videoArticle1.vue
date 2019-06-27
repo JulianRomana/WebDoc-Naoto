@@ -1,14 +1,14 @@
 <template>
   <div>
     <section id="firstScreen" class="firstScreen">
-      <video src="../assets/videos/WebPremierePartie.mp4" width="1450" height="750" autoplay></video>
+      <video src="../../assets/videos/apres1.mp4" width="1450" height="750" autoplay></video>
       <nav class="controls">
-        <img class="play-pause" src="../static/images/play.svg" @click="playOrPause">
+        <img class="play-pause" src="../../static/images/play.svg" @click="playOrPause">
         <input class="seekbar" type="range" min="0" max="100">
-        <img class="mute" src="../static/images/speaker.svg" @click="muteOrUnmute">
+        <img class="mute" src="../../static/images/speaker.svg" @click="muteOrUnmute">
       </nav>
     </section>
-    <nuxt-link to="/enfantMiracle/enfantMiracle" class="nav">voir l'article</nuxt-link>
+    <nuxt-link to="article2" class="nav">voir l'article</nuxt-link>
   </div>
 </template>
 
@@ -57,14 +57,12 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 95vh;
-  width: 100vw;
+  height: 90vh;
   video {
     position: fixed;
     top: 45%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 100%;
   }
   .controls {
     z-index: 1;
@@ -76,6 +74,7 @@ export default {
     align-items: center;
     position: absolute;
     bottom: 50px;
+
     img {
       opacity: 1;
     }
