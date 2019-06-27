@@ -25,26 +25,29 @@
 <style scoped lang="scss">
 .enfantMiracle__wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   background-color: white;
-  overflow: hidden;
   background-image: url("../../static/images/enfantBG.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 figure {
   display: flex;
-  justify-content: space-between;
-  height: 70%;
+  justify-content: center;
+  position: relative;
+  height: 37.5%;
   img {
-    height: 70%;
+    height: 55%;
+    position: relative;
   }
   figcaption {
     background-color: white;
     font-size: 17px;
     overflow: scroll;
     line-height: 23px;
-    height: 1000px;
+    height: 820px;
+    width: 700px;
     p {
       margin: 20px 20px 0px 20px;
       line-height: 1.7rem;
@@ -55,9 +58,9 @@ figure {
   }
 }
 h1 {
-  text-align: center;
-  margin: 50px 0px 50px;
-  font-size: 20px;
+  text-align: left;
+  padding: 80px 0px 50px 40px;
+  font-size: 30px;
   transition: ease;
 }
 </style>
