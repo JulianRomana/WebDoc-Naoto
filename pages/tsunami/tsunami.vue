@@ -33,7 +33,7 @@
 }
 .fukushima__wrapper {
   width: 100vw;
-  height: 265vh;
+  height: 180vh;
   background-color: white;
   background-image: url("../../static/images/seisme/seismeBackground.png");
   background-size: cover;
@@ -83,22 +83,22 @@ figure {
   .secondImg {
     display: none;
     position: fixed;
-    top: 130px;
-    left: 150px;
+    top: 70px;
+    left: 180px;
     z-index: 3;
   }
   .thirdImg {
     display: none;
     position: fixed;
-    top: 270px;
-    left: 500px;
+    top: 240px;
+    left: 530px;
     z-index: 2;
   }
   .fourthImg {
     display: none;
     position: fixed;
-    top: 130px;
-    left: 1000px;
+    top: 100px;
+    left: 1030px;
     z-index: 1;
   }
   figcaption {
@@ -124,10 +124,9 @@ figure {
 }
 h1 {
   margin-left: 150px;
-  padding: 50px 0px 50px;
   font-size: 20px;
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 30px;
 }
 .returnButton {
@@ -182,42 +181,25 @@ export default {
     });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
+    let aside = document.querySelector("aside");
     let second = document.querySelector(".secondImg");
     let third = document.querySelector(".thirdImg");
     let fourth = document.querySelector(".fourthImg");
-    let aside = document.querySelector("aside");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
-      let scrollDiv = scroll / 100;
-      let scrollSecond = scrollDiv - 3;
-      console.log(scrollDiv);
-      first.style.transform = `scale(${1 + scrollDiv})`;
-      txt.style.transform = `scale(${1 + scrollDiv})`;
-      let size = 3.2;
-      if (scrollDiv > size) {
-        first.style.display = "none";
-        txt.style.display = "none";
-        aside.style.display = "block";
+      first.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
+      txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
+      if (scroll > 502) {
+        scroll = scroll - 502;
+        console.log(scroll);
         second.style.display = "block";
-        second.style.transform = `scale(${scrollSecond})`;
-        if (scrollSecond > size) {
-          second.style.display = "none";
-          third.style.display = "block";
-          scrollSecond = scrollSecond - 2.6;
-          third.style.transform = `scale(${scrollSecond})`;
-          if (scrollSecond > size) {
-            third.style.display = "none";
-            fourth.style.display = "block";
-            scrollSecond = scrollSecond - 2.6;
-            fourth.style.transform = `scale(${scrollSecond})`;
-            if (scrollSecond > size) {
-              fourth.style.display = "none";
-            }
-          }
-        }
+        third.style.display = "block";
+        fourth.style.display = "block";
+        aside.style.display = "block";
+        second.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
+        third.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
+        fourth.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       } else {
-        first.style.display = "block";
-        txt.style.display = "block";
         second.style.display = "none";
         third.style.display = "none";
         fourth.style.display = "none";
