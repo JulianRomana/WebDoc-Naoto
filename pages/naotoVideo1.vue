@@ -4,8 +4,10 @@
       <video src="../assets/videos/WebPremierePartie.mp4" width="1450" height="750" autoplay></video>
       <nav class="controls">
         <img class="play-pause" src="../static/images/play.svg" @click="playOrPause">
+        <img class="pause-play" src="../static/images/pause.svg" @click="playOrPause">
         <input class="seekbar" type="range" min="0" max="100">
         <img class="mute" src="../static/images/speaker.svg" @click="muteOrUnmute">
+        <img class="unmute" src="../static/images/speakerMute.svg" @click="muteOrUnmute">
       </nav>
     </section>
     <Menu></Menu>
@@ -38,22 +40,34 @@ export default {
   methods: {
     playOrPause() {
       const video = document.querySelector("video");
+      let button = document.querySelector(".play-pause");
+      let button2 = document.querySelector(".pause-play");
       if (video.paused == true) {
         // Play the video
         video.play();
+        button.style.display = "none";
+        button2.style.display = "flex";
       } else {
         // Pause the video
         video.pause();
+        button.style.display = "flex";
+        button2.style.display = "none";
       }
     },
     muteOrUnmute() {
       const video = document.querySelector("video");
+      let button = document.querySelector(".mute");
+      let button2 = document.querySelector(".unmute");
       if (video.muted == false) {
         // Mute the video
         video.muted = true;
+        button.style.display = "none";
+        button2.style.display = "flex";
       } else {
         // Unmute the video
         video.muted = false;
+        button.style.display = "flex";
+        button2.style.display = "none";
       }
     }
   }
@@ -98,6 +112,12 @@ export default {
     }
     .seekbar {
       width: 90%;
+    }
+    .play-pause {
+      display: none;
+    }
+    .unmute {
+      display: none;
     }
   }
 }
