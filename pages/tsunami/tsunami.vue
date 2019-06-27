@@ -43,7 +43,7 @@
   width: 100vw;
   height: 180vh;
   background-color: white;
-  background-image: url("../../static/images/seisme/seismeBackground.png");
+  background-image: url("../../static/images/tsunami/tsunamiBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
