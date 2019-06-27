@@ -154,6 +154,9 @@ h1 {
   top: 40%;
   left: 10px;
 }
+.start {
+  display: none;
+}
 @keyframes beforeSize {
   0% {
     height: 0px;
@@ -206,6 +209,7 @@ export default {
     let second = document.querySelector(".secondImg");
     let third = document.querySelector(".thirdImg");
     let fourth = document.querySelector(".fourthImg");
+    let next = document.querySelector(".start");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
       first.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
@@ -216,6 +220,7 @@ export default {
         second.style.display = "block";
         third.style.display = "block";
         fourth.style.display = "block";
+        next.style.display = "flex";
         aside.style.display = "none";
         second.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
         third.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
@@ -224,6 +229,7 @@ export default {
         second.style.display = "none";
         third.style.display = "none";
         aside.style.display = "block";
+        next.style.display = "none";
         fourth.style.display = "none";
       }
     });
