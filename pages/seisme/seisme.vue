@@ -25,7 +25,7 @@
       <nuxt-link class="link" to="../fukushimaArticle/catastrophe">
         <Retour class="returnButton" Retour="Retour"></Retour>
       </nuxt-link>
-      <nuxt-link class="link" to="../tsunami/tsunami">
+      <nuxt-link class="link2" to="../tsunami/tsunami">
         <VoirArticle class="next" Article="Suite"></VoirArticle>
       </nuxt-link>
     </section>
@@ -33,7 +33,11 @@
 </template>
 
 <style scoped lang="scss">
+.link2 {
+  display: none;
+}
 .next {
+  z-index: 4;
   position: fixed;
   top: 40%;
   right: 10px;
@@ -49,9 +53,6 @@
   &:hover {
     background-color: rgba(255, 255, 255, 0.561);
   }
-}
-.link {
-  color: black;
 }
 .singleImage {
   display: none;
@@ -159,6 +160,7 @@ h1 {
   position: fixed;
   top: 40%;
   left: 10px;
+  color: black;
 }
 @keyframes beforeSize {
   0% {
@@ -213,6 +215,7 @@ export default {
     let second = document.querySelector(".secondImg");
     let third = document.querySelector(".thirdImg");
     let fourth = document.querySelector(".fourthImg");
+    let next = document.querySelector(".link2");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
       first.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
@@ -224,6 +227,7 @@ export default {
         third.style.display = "block";
         fourth.style.display = "block";
         aside.style.display = "block";
+        next.style.display = "flex";
         second.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
         third.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
         fourth.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
@@ -231,6 +235,7 @@ export default {
         second.style.display = "none";
         third.style.display = "none";
         fourth.style.display = "none";
+        next.style.display = "none";
         aside.style.display = "none";
       }
     });
