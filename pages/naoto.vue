@@ -23,7 +23,9 @@
         </nuxt-link>
         <div class="play">
           <img src="../static/images/line.svg">
-          <img src="../static/images/arrow2.svg">
+          <nuxt-link class="watchVideo" to="/naotoVideo1">
+            <img src="../static/images/arrow2.svg">
+          </nuxt-link>
           <nuxt-link class="start" to="/naotoVideo1">Commencer L'expérience</nuxt-link>
         </div>
         <nuxt-link class="link" to="/apres">
@@ -101,7 +103,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 40px 0px 40px;
   color: white;
   font-family: League spartan;
   .previous {
@@ -126,14 +128,17 @@ nav {
   .play {
     display: flex;
     flex-direction: column;
-    padding-right: 70px;
     z-index: 1;
     img:nth-child(1) {
       padding-bottom: 20px;
       height: 185px;
     }
-    img:nth-child(2) {
-      padding-bottom: 20px;
+    .watchVideo {
+      text-align: center;
+      img {
+        padding-bottom: 20px;
+        height: 65px;
+      }
     }
     .start {
       position: relative;

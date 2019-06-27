@@ -50,7 +50,7 @@ export default {
     checkForm(e) {
       e.preventDefault();
       if (id.value === "admin" && password.value === "admin") {
-        this.$router.push("/articles/articles");
+        this.$router.push("/backoffice/articles");
       }
     }
   }
