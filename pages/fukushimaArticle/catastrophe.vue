@@ -23,13 +23,26 @@
       </aside>
       <Menu></Menu>
       <nuxt-link class="return" to="fukushimaVideo">
-        <Retour class="returnButton"></Retour>
+        <Retour Retour="Vidéo" class="returnButton"></Retour>
+      </nuxt-link>
+      <nuxt-link class="start" to="../seisme/seisme">
+        <VoirArticle Article="Suite" class="watchArticle"></VoirArticle>
       </nuxt-link>
     </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.watchArticle {
+  background-color: white;
+  color: black;
+  display: block;
+  text-align: center;
+  padding-top: 28px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+  }
+}
 .singleImage {
   display: none;
 }
@@ -159,8 +172,14 @@ h1 {
 import Menu from "~/components/Menu.vue";
 import axios from "axios";
 import Retour from "~/components/Retour.vue";
+import VoirArticle from "~/components/VoirArticle";
 import $ from "jquery";
 export default {
+  components: {
+    Menu,
+    Retour,
+    VoirArticle
+  },
   data() {
     return {
       articleName: null,
@@ -169,10 +188,6 @@ export default {
       articleImage3: null,
       articleImage4: null
     };
-  },
-  components: {
-    Menu,
-    Retour
   },
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {

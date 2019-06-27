@@ -23,7 +23,7 @@
     </figure>
     <Menu></Menu>
     <nuxt-link class="return" to="../naotoVideo1">
-      <Retour class="returnVideo"></Retour>
+      <Retour Retour="Vidéo" class="returnVideo"></Retour>
     </nuxt-link>
   </div>
 </template>

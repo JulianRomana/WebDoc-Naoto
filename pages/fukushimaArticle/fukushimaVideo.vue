@@ -9,7 +9,7 @@
       </nav>
     </section>
     <nuxt-link class="start" to="catastrophe">
-      <VoirArticle></VoirArticle>
+      <VoirArticle Article="Voir l'Article"></VoirArticle>
     </nuxt-link>
     <Menu></Menu>
   </div>

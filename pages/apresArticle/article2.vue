@@ -22,7 +22,7 @@
         <p>{{ txt5 }}</p>
       </article>
       <nuxt-link class="return" to="videoArticle2">
-        <Retour class="returnButton">Vidéo</Retour>
+        <Retour Retour="Vidéo" class="returnButton"></Retour>
       </nuxt-link>
     </section>
     <Menu></Menu>
@@ -32,7 +32,7 @@
 .returnButton {
   position: fixed;
   top: 40%;
-  left: 0;
+  left: 10px;
 }
 .apresScreen::before {
   content: "";
