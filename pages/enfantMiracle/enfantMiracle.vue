@@ -93,6 +93,7 @@ export default {
       this.arrayName = response.data[2].name;
       this.arrayContent = response.data[2].content;
       this.arrayImage = response.data[2].img;
+      console.log(this.arrayImage);
     });
   }
 };

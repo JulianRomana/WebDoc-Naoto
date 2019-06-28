@@ -33,6 +33,7 @@
   position: fixed;
   top: 40%;
   left: 10px;
+  z-index: 5;
 }
 .apresScreen::before {
   content: "";

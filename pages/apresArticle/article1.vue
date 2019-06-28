@@ -28,6 +28,7 @@
   position: fixed;
   top: 40%;
   left: 10px;
+  z-index: 5;
 }
 .return {
   color: black;
