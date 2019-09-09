@@ -22,7 +22,7 @@
           </div>
         </nuxt-link>
         <div class="play">
-          <img src="../../static/images/line.svg" />
+          <img src="../static/images/Line.svg" />
           <nuxt-link class="watchVideo" to="./fukushimaArticle/fukushimaVideo">
             <img src="../static/images/arrow2.svg" />
           </nuxt-link>

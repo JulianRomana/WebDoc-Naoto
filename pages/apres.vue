@@ -24,7 +24,7 @@
           </div>
         </nuxt-link>
         <div class="play">
-          <img src="../../static/images/line.svg" />
+          <img src="../static/images/Line.svg" />
           <nuxt-link class="watchVideo" to="./apresArticle/videoArticle1">
             <img src="../static/images/arrow2.svg" />
           </nuxt-link>
@@ -42,6 +42,9 @@
     </section>
   </div>
 </template>
+<script>
+import Line from "../static/images/";
+</script>
 <style scoped lang="scss">
 .apresScreen::before {
   content: "";
