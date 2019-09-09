@@ -1,19 +1,19 @@
 <template>
   <div class="fukushima__wrapper">
     <section class="content">
-      <h1>{{articleName}}</h1>
+      <h1>CATASTROPHE NUCLÉAIRE DE FUKUSHIMA</h1>
       <figure>
-        <img class="firstMove" :src="articleImage1" alt>
-        <img class="secondImg" :src="articleImage2" alt>
-        <img class="thirdImg" :src="articleImage3" alt>
-        <img class="fourthImg" :src="articleImage4" alt>
+        <img class="firstMove" src="../../static/images/catastrophe/catastrophe-1.png" alt />
+        <img class="secondImg" src="../../static/images/catastrophe/catastrophe-2.png" alt />
+        <img class="thirdImg" src="../../static/images/catastrophe/catastrophe-3.png" alt />
+        <img class="fourthImg" src="../../static/images/catastrophe/catastrophe-4.png" alt />
         <figcaption class="txt">
           <p>
             <span>Suite au tremblement de terre</span> qui a causé une panne d’électricité, et au tsunami qui a submergé la centrale puis mis hors service le système de refroidissement des réacteurs, les réacteurs 1,2 et 3 sont entrés en fusion, ce qui a causé plusieurs explosions a l’intérieur de la centrale sur plusieurs jours.
-            <br>
-            <br>Cet incident nucléaire est un accident de niveau 7 sur l’échelle de Richter, et équivaut à celui de Tchernobyl.
-            <br>
-            <br>Dès les premiers jours et encore aujourd’hui, d'importants rejets sont dispersés dans l'air. Ils se déplacent au gré des vent, et en raison de fuites continues, les rejets touches le littoral proche, les fonds marins et l’Océan Pacifique.
+            <br />
+            <br />Cet incident nucléaire est un accident de niveau 7 sur l’échelle de Richter, et équivaut à celui de Tchernobyl.
+            <br />
+            <br />Dès les premiers jours et encore aujourd’hui, d'importants rejets sont dispersés dans l'air. Ils se déplacent au gré des vent, et en raison de fuites continues, les rejets touches le littoral proche, les fonds marins et l’Océan Pacifique.
           </p>
         </figcaption>
       </figure>
@@ -176,7 +176,6 @@ h1 {
 </style>
 <script>
 import Menu from "~/components/Menu.vue";
-import axios from "axios";
 import Retour from "~/components/Retour.vue";
 import VoirArticle from "~/components/VoirArticle";
 import $ from "jquery";
@@ -186,23 +185,7 @@ export default {
     Retour,
     VoirArticle
   },
-  data() {
-    return {
-      articleName: null,
-      articleImage1: null,
-      articleImage2: null,
-      articleImage3: null,
-      articleImage4: null
-    };
-  },
   mounted() {
-    axios.get("http://localhost:7892/api/articles").then(response => {
-      this.articleName = response.data[1].name;
-      this.articleImage1 = response.data[1].img;
-      this.articleImage2 = response.data[1].img2;
-      this.articleImage3 = response.data[1].img3;
-      this.articleImage4 = response.data[1].img4;
-    });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let aside = document.querySelector("aside");
@@ -216,7 +199,6 @@ export default {
       txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       if (scroll > 502) {
         scroll = scroll - 502;
-        console.log(scroll);
         second.style.display = "block";
         third.style.display = "block";
         fourth.style.display = "block";

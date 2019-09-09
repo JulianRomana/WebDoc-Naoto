@@ -1,19 +1,19 @@
 <template>
   <div class="fukushima__wrapper">
     <section class="content">
-      <h1>{{articleName}}</h1>
+      <h1>SEISME SUR LA CÔTE PACIFIQUE DU TOHOKU</h1>
       <figure>
-        <img class="firstMove" :src="articleImage1" alt>
-        <img class="secondImg" :src="articleImage2" alt>
-        <img class="thirdImg" :src="articleImage3" alt>
-        <img class="fourthImg" :src="articleImage4" alt>
+        <img class="firstMove" src="../../static/images/seisme/seisme-1.png" alt />
+        <img class="secondImg" src="../../static/images/seisme/seisme-2.png" alt />
+        <img class="thirdImg" src="../../static/images/seisme/seisme-3.png" alt />
+        <img class="fourthImg" src="../../static/images/seisme/seisme-4.png" alt />
         <figcaption class="txt">
           <p>
             Le 11 mars 2011 à 14h56 (heure française), a lieu un séisme de magnitude 9,1 sur l’échelle de Richter. Le séisme de 2011 de la côte Pacifique du Tohoku frappe les côtes Nord Est de l’île de Honshu (l’île principale du Japon).
-            <br>
-            <br>Malgré la forte magnitude de cet incident, celui-ci eut peu de répercussions sur les villes avoisinant l’épicentre du séisme grâce aux constructions antisismiques japonaises. Il fait partie des cinq séismes meurtriers les plus puissants.
-            <br>
-            <br>Ce séisme eut tout de même un impact sur la centrale nucléaire de Fukushima en causant une coupure d’électricité dans la centrale.
+            <br />
+            <br />Malgré la forte magnitude de cet incident, celui-ci eut peu de répercussions sur les villes avoisinant l’épicentre du séisme grâce aux constructions antisismiques japonaises. Il fait partie des cinq séismes meurtriers les plus puissants.
+            <br />
+            <br />Ce séisme eut tout de même un impact sur la centrale nucléaire de Fukushima en causant une coupure d’électricité dans la centrale.
           </p>
         </figcaption>
       </figure>
@@ -181,7 +181,6 @@ h1 {
 </style>
 <script>
 import Menu from "~/components/Menu";
-import axios from "axios";
 import Retour from "~/components/Retour";
 import VoirArticle from "~/components/VoirArticle";
 
@@ -192,23 +191,7 @@ export default {
     Retour,
     VoirArticle
   },
-  data() {
-    return {
-      articleName: null,
-      articleImage1: null,
-      articleImage2: null,
-      articleImage3: null,
-      articleImage4: null
-    };
-  },
   mounted() {
-    axios.get("http://localhost:7892/api/articles").then(response => {
-      this.articleName = response.data[3].name;
-      this.articleImage1 = response.data[3].img;
-      this.articleImage2 = response.data[3].img2;
-      this.articleImage3 = response.data[3].img3;
-      this.articleImage4 = response.data[3].img4;
-    });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let aside = document.querySelector("aside");
@@ -222,7 +205,6 @@ export default {
       txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       if (scroll > 502) {
         scroll = scroll - 502;
-        console.log(scroll);
         second.style.display = "block";
         third.style.display = "block";
         fourth.style.display = "block";

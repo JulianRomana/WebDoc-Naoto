@@ -3,7 +3,7 @@
     <form @submit="checking" method="post" action>
       <div class="form-group">
         <label for="name">Le nom de l'article</label>
-        <input class="form-control" v-model="info.name" id="name" type="text">
+        <input class="form-control" v-model="info.name" id="name" type="text" />
       </div>
       <div class="form-group">
         <label for="content">Le contenu de l'article</label>
@@ -13,13 +13,13 @@
           id="content"
           type="text"
           minlength="50"
-        >
+        />
       </div>
       <div class="form-group">
         <label for="file">L'image de l'article</label>
-        <input class="form-control" v-model="info.img" id="file" type="url">
+        <input class="form-control" v-model="info.img" id="file" type="url" />
       </div>
-      <input class="btn btn-primary" type="submit" name="Envoyer">
+      <input class="btn btn-primary" type="submit" name="Envoyer" />
     </form>
   </div>
 </template>
@@ -55,7 +55,6 @@ export default {
   methods: {
     checking(e) {
       e.preventDefault();
-      console.log(this.info);
       axios({
         method: "post",
         url: "http://localhost:7892/api/articles",

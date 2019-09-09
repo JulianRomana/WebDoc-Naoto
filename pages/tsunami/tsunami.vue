@@ -1,19 +1,19 @@
 <template>
   <div class="fukushima__wrapper">
     <section class="content">
-      <h1>{{articleName}}</h1>
+      <h1>LE TSUNAMI</h1>
       <figure>
-        <img class="firstMove" :src="articleImage1" alt>
-        <img class="secondImg" :src="articleImage2" alt>
-        <img class="thirdImg" :src="articleImage3" alt>
-        <img class="fourthImg" :src="articleImage4" alt>
+        <img class="firstMove" src="../../static/images/tsunami/tsunami-1.png" alt />
+        <img class="secondImg" src="../../static/images/tsunami/tsunami-2.png" alt />
+        <img class="thirdImg" src="../../static/images/tsunami/tsunami-3.png" alt />
+        <img class="fourthImg" src="../../static/images/tsunami/tsunami-4.png" alt />
         <figcaption class="txt">
           <p>
             10 minutes après le tremblement de Terre, un tsunami eu lieu. Des vagues entre 10 et 15 mètres, atteignant même plus de 30 mètres de haut se sont abattues sur les côtes pacifiques du Japon.
-            <br>
-            <br>Celles ci se sont étendues jusqu’à 10km dans les villes de Iwate Fukushima et Miyagi, et ont détruit plus de 600km de côtes.
-            <br>
-            <br>Le tsunami est la cause de plus de 90% des dégâts matériels et des morts. Ce tsunami à aussi provoqué une submersion du système de refroidissement de la centrale de Fukushima .
+            <br />
+            <br />Celles ci se sont étendues jusqu’à 10km dans les villes de Iwate Fukushima et Miyagi, et ont détruit plus de 600km de côtes.
+            <br />
+            <br />Le tsunami est la cause de plus de 90% des dégâts matériels et des morts. Ce tsunami à aussi provoqué une submersion du système de refroidissement de la centrale de Fukushima .
           </p>
         </figcaption>
       </figure>
@@ -161,32 +161,14 @@ h1 {
 </style>
 <script>
 import Menu from "~/components/Menu.vue";
-import axios from "axios";
 import Retour from "~/components/Retour.vue";
 import $ from "jquery";
 export default {
-  data() {
-    return {
-      articleName: null,
-      articleImage1: null,
-      articleImage2: null,
-      articleImage3: null,
-      articleImage4: null
-    };
-  },
   components: {
     Menu,
     Retour
   },
   mounted() {
-    axios.get("http://localhost:7892/api/articles").then(response => {
-      console.log(response.data);
-      this.articleName = response.data[4].name;
-      this.articleImage1 = response.data[4].img;
-      this.articleImage2 = response.data[4].img2;
-      this.articleImage3 = response.data[4].img3;
-      this.articleImage4 = response.data[4].img4;
-    });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let aside = document.querySelector("aside");
@@ -199,7 +181,6 @@ export default {
       txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       if (scroll > 502) {
         scroll = scroll - 502;
-        console.log(scroll);
         second.style.display = "block";
         third.style.display = "block";
         fourth.style.display = "block";

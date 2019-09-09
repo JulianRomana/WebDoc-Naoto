@@ -2,16 +2,16 @@
   <div>
     <section id="apresScreen" class="apresScreen">
       <h1>L’APRÈS</h1>
-      <img class="firstMove" :src="img1">
-      <img class="secondImg" :src="img2">
+      <img class="firstMove" src="../../static/images/lapres/rectangle-1.png" />
+      <img class="secondImg" src="../../static/images/lapres/rectangle-5.png" />
       <article class="txt">
-        <p>{{ txt }}</p>
+        <p>Hiroshi Masakura, un ancien propriétaire de Tomioka, vit actuellement au centre d’évacuation d’Iwaki, au sud de la zone contaminée. L’homme a une soixantaine d'années, un visage puissant et une voix douce. Initialement, la famille avait été évacuée au nord de Tomioka et avait passé des mois dans une salle de sport qu’elle partageait avec de nombreuses autres personnes. «C'était supportable» a déclaré Monsieur Masakura. «Nous avons tous mangé la même nourriture, nous étions tous ensemble.</p>
       </article>
       <article class="txt2">
-        <p>{{ txt2 }}</p>
+        <p>Des gens comme vous et même des célébrités nous ont rendu visite. » lui et sa famille ont ensuite déménagé dans une colonie de maisons préfabriquées dans la banlieue d'Iwaki. Les sols nus des salles de sport et la simple survie ont été remplacés par un semblant de vie réelle, malgré tout un substitut médiocre. C'est à ce moment-là que les premières douleurs ont débutées en rapport aux pertes, possessions parties pour toujours et similaires à celles que connaissent les personnes qui ont perdu leurs maisons à la suite de guerres ou d’autres catastrophes.</p>
       </article>
       <article class="txt3">
-        <p>{{ txt3 }}</p>
+        <p>Dès qu'ils ont emménagé dans le nouvel appartement, sa femme Miyo a commencé à souffrir de dépression. Trois mois plus tard, elle est tombée malade et a été emmenée à l'hôpital, ayant de sérieux problèmes d'estomac. Quatre mois plus tard “Elle était morte” nous raconte Monsieur Masakura la voix tremblante.</p>
       </article>
       <nuxt-link to="videoArticle2">
         <VoirArticle Article="Suite Vidéo" class="returnButton"></VoirArticle>
@@ -177,7 +177,6 @@
 }
 </style>
 <script>
-const axios = require("axios");
 import Menu from "~/components/Menu.vue";
 import VoirArticle from "~/components/VoirArticle";
 import Retour from "~/components/Retour";
@@ -188,24 +187,7 @@ export default {
     Retour,
     VoirArticle
   },
-  data() {
-    return {
-      img1: null,
-      img2: null,
-      txt: null,
-      txt2: null,
-      txt3: null
-    };
-  },
   mounted() {
-    axios.get("http://localhost:7892/api/articles").then(response => {
-      console.log(response.data[0]);
-      this.img1 = response.data[0].img2;
-      this.img2 = response.data[0].img6;
-      this.txt = response.data[0].content4;
-      this.txt2 = response.data[0].content5;
-      this.txt3 = response.data[0].content6;
-    });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let button = document.querySelector(".returnButton");

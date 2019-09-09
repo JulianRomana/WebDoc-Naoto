@@ -4,7 +4,7 @@
       <li class="article" v-for="article in this.array">
         <h2 class="article__name">{{article.name}}</h2>
         <p>{{article.content}}</p>
-        <img class="article__img" :src="article.img" alt>
+        <img class="article__img" :src="article.img" alt />
       </li>
     </ul>
   </div>
@@ -24,7 +24,6 @@ export default {
   mounted() {
     axios.get("http://localhost:7892/api/articles").then(response => {
       this.array = response.data;
-      console.log(this.array);
     });
   }
 };

@@ -2,24 +2,24 @@
   <div>
     <section id="apresScreen" class="apresScreen">
       <h1>L’APRÈS</h1>
-      <img class="firstMove" :src="img1">
-      <img class="secondImg" :src="img2">
-      <img class="thirdImg" :src="img3">
-      <img class="fourthImg" :src="img4">
+      <img class="firstMove" src="../../static/images/lapres/rectangle.png" />
+      <img class="secondImg" src="../../static/images/lapres/rectangle-3.png" />
+      <img class="thirdImg" src="../../static/images/lapres/rectangle-4.png" />
+      <img class="fourthImg" src="../../static/images/lapres/rectangle-2.png" />
       <article class="txt">
-        <p>{{ txt }}</p>
+        <p>Keigo Sakamoto, un agriculteur et ancien soignant pour handicapés mentaux, est une de ces personnes pouvant être considérée comme folle par certains et comme un héros par d'autres. Monsieur Sakamoto a refusé d’évacuer et est resté à l'intérieur de la zone irradiée où il a fait des animaux sa priorité. Il s'est aventuré dans les villes et villages abandonnés et a rassemblé tous les chiens, chats ainsi que les marmottes et les lapins abandonnés par leurs anciens propriétaires.</p>
       </article>
       <article class="txt2">
-        <p>{{ txt2 }}</p>
+        <p>Sakamoto vit maintenant dans son ranch de montagne, près de la ville de Naraha avec plus de 500 animaux. Un théâtre bruyant causé par beaucoup de ses chiens devenus fous après avoir été seuls, avant que Sakamoto ne les sauve.</p>
       </article>
       <article class="txt3">
-        <p>{{ txt3 }}</p>
+        <p>"Il n'y a pas de voisins" a déclaré Monsieur Sakamoto. "Je suis seul ici mais je suis là pour rester." Parmi ses vingt chiens, seuls deux sont amicaux avec l'homme. L’un d’eux s’appelle Atom, un petit chien blanc, né juste avant la catastrophe de Fukushima.</p>
       </article>
       <article class="txt4">
-        <p>{{ txt4 }}</p>
+        <p>Le long de la rue principale de Tomioka, se trouve un couple de personnes âgées avec des masques sur le visage et des sacs en plastique sur les chaussures. Ils ont obtenu une des rares autorisations pour se rendre à leur domicile et à la confiserie familiale qu’ils dirigeaient. Ils sont inquiets quant à l’hygiène de leur boutique, ils ont installé des pièges à souris partout, et le couple passe son temps à sortir les souris mortes et à y mettre plus de poison.</p>
       </article>
       <article class="txt5">
-        <p>{{ txt5 }}</p>
+        <p>Après la suppression des parasites, Zenjuro et sa femme ont commencé à nettoyer les congélateurs à l'intérieur de leur magasin. À leur grande surprise, tous les gâteaux étaient toujours là et en parfait état. Nagaoka, le propriétaire, a expliqué que le courant ne s'était jamais éteint depuis le jour de la catastrophe. Il n'a pas semblé trouver cela étrange ou particulièrement significatif.</p>
       </article>
       <nuxt-link class="return" to="videoArticle2">
         <Retour Retour="Vidéo" class="returnButton"></Retour>
@@ -159,7 +159,6 @@
 }
 </style>
 <script>
-const axios = require("axios");
 import Menu from "~/components/Menu.vue";
 import Retour from "~/components/Retour";
 import $ from "jquery";
@@ -168,31 +167,7 @@ export default {
     Menu,
     Retour
   },
-  data() {
-    return {
-      img1: null,
-      img2: null,
-      img3: null,
-      img4: null,
-      txt: null,
-      txt2: null,
-      txt3: null,
-      txt4: null,
-      txt5: null
-    };
-  },
   mounted() {
-    axios.get("http://localhost:7892/api/articles").then(response => {
-      this.img1 = response.data[0].img1;
-      this.img2 = response.data[0].img4;
-      this.img3 = response.data[0].img5;
-      this.img4 = response.data[0].img3;
-      this.txt = response.data[0].content;
-      this.txt2 = response.data[0].content2;
-      this.txt3 = response.data[0].content3;
-      this.txt4 = response.data[0].content7;
-      this.txt5 = response.data[0].content8;
-    });
     let first = document.querySelector(".firstMove");
     let txt = document.querySelector(".txt");
     let button = document.querySelector(".returnButton");
@@ -205,7 +180,6 @@ export default {
     let txt5 = document.querySelector(".txt5");
     $(window).scroll(function(event) {
       let scroll = $(window).scrollTop();
-      console.log(scroll);
       first.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       txt.style.transform = `perspective(500px) translate3d(0, 0, ${scroll}px)`;
       if (scroll > 502) {
@@ -226,7 +200,6 @@ export default {
       }
       if (scroll > 502) {
         scroll = scroll - 502;
-        console.log(img4);
         img4.style.display = "block";
         txt4.style.display = "block";
         txt5.style.display = "block";
