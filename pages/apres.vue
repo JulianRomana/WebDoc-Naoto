@@ -42,9 +42,6 @@
     </section>
   </div>
 </template>
-<script>
-import Line from "../static/images/";
-</script>
 <style scoped lang="scss">
 .apresScreen::before {
   content: "";
