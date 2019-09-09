@@ -6,13 +6,13 @@
           <h1>L’ARCHE DE TOMIOKA</h1>
           <p>NAOTO MASTUMURA : LE GARDIEN DES ANIMAUX</p>
         </div>
-        <img class="logo" src="../static/images/logo.png">
+        <img class="logo" src="../static/images/logo.png" />
       </header>
       <main>
         <h2>NAOTO MATSUMURA</h2>
         <p>
           Un webdocumentaire narrant le parcours
-          <br>d’un homme revenu vivre dans son village irradié.
+          <br />d’un homme revenu vivre dans son village irradié.
         </p>
       </main>
       <nav>
@@ -22,9 +22,9 @@
           </div>
         </nuxt-link>
         <div class="play">
-          <img src="../static/images/line.svg">
+          <img src="../../static/images/line.svg" />
           <nuxt-link class="watchVideo" to="/naotoVideo1">
-            <img src="../static/images/arrow2.svg">
+            <img src="../static/images/arrow2.svg" />
           </nuxt-link>
           <nuxt-link class="start" to="/naotoVideo1">Commencer L'expérience</nuxt-link>
         </div>

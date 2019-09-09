@@ -6,14 +6,14 @@
           <h1>L’ARCHE DE TOMIOKA</h1>
           <p>NAOTO MASTUMURA : LE GARDIEN DES ANIMAUX</p>
         </div>
-        <img class="logo" src="../static/images/logo.png">
+        <img class="logo" src="../static/images/logo.png" />
       </header>
       <main>
         <h2>LES REVENANTS</h2>
         <p>
           D’autres personnes ont regagné les terres qu’elles
-          <br>avaient abandonnées après la catastrophe.
-          <br>Aujourd’hui
+          <br />avaient abandonnées après la catastrophe.
+          <br />Aujourd’hui
           elles vivent, par choix, exposées aux radiations.
         </p>
       </main>
@@ -24,9 +24,9 @@
           </div>
         </nuxt-link>
         <div class="play">
-          <img src="../static/images/line.svg">
+          <img src="../../static/images/line.svg" />
           <nuxt-link class="watchVideo" to="./apresArticle/videoArticle1">
-            <img src="../static/images/arrow2.svg">
+            <img src="../static/images/arrow2.svg" />
           </nuxt-link>
           <nuxt-link class="start" to="./apresArticle/videoArticle1">
             <p>Commencer l'expérience</p>

@@ -6,13 +6,13 @@
           <h1>L’ARCHE DE TOMIOKA</h1>
           <p>NAOTO MASTUMURA : LE GARDIEN DES ANIMAUX</p>
         </div>
-        <img class="logo" src="../static/images/logo.png">
+        <img class="logo" src="../static/images/logo.png" />
       </header>
       <main>
         <h2>FUKUSHIMA</h2>
         <p>
           Un retour sur le déroulement de la
-          <br>catastrophe du 11 Mars 2011
+          <br />catastrophe du 11 Mars 2011
         </p>
       </main>
       <nav>
@@ -22,9 +22,9 @@
           </div>
         </nuxt-link>
         <div class="play">
-          <img src="../static/images/line.svg">
+          <img src="../../static/images/line.svg" />
           <nuxt-link class="watchVideo" to="./fukushimaArticle/fukushimaVideo">
-            <img src="../static/images/arrow2.svg">
+            <img src="../static/images/arrow2.svg" />
           </nuxt-link>
           <nuxt-link class="start" to="./fukushimaArticle/fukushimaVideo">Commencer l'expérience</nuxt-link>
         </div>
